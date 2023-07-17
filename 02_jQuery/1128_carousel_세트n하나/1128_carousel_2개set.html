@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐러셀_한덩어리 부드럽게 이동하기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".next").click(function(){
+                //wrap 그룹을 왼쪽으로 1000px 이동시킨다
+                // 순서대로 실행하기 위한 콜백 함수 function
+                // .prev버튼 눌렀을때 나오게 해주기 위해 -200%로 수정
+                $(".wrap").stop().animate({"margin-left":"-200%"},function(){
+                    // .wrap 그룹의 맨 처음 요소를 .wrap그룹의 맨 마지막으로 보냄
+                    $(".wrap > li").first().appendTo(".wrap");
+                    // 1000px 왼쪽으로 이동한 좌표를 다시 0으로 찍어줌 
+                    $(".wrap").css({"margin-left":"-100%"});
+                });
+            });
+
+            $(".prev").click(function(){
+                $(".wrap").stop().animate({"margin-left":"0"},function(){
+                    // .wrap그룹의 마지작 요소를 .wrap 그룹의 맨 처음으로 보냄
+                    $(".wrap > li").last().prependTo(".wrap");
+                    $(".wrap").css({"margin-left":"-100%"});
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="carousel">
+            <ul class="wrap clerFix">
+                <li>
+                    <ul class="panel">
+                        <li class="bg1">001</li>
+                        <li class="bg2">002</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="panel">
+                        <li class="bg3">003</li>
+                        <li class="bg4">004</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="panel">
+                        <li class="bg5">005</li>
+                        <li class="bg6">006</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="panel">
+                        <li class="bg7">007</li>
+                        <li class="bg8">008</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="prev"></p>
+            <p class="next"></p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,71 @@
+1. 폰트 속성
+font-size:16pt; / 20px; / 3em;  글자크기
+color:red; / #ff0000; 글자색상
+font-weight :bolod; / normal; 글자두께
+font-style:italic; / normal; 이탤릭체
+font-family:"산돌광수체"; 글자종류
+text-align:center; / left; / right; 텍스트정렬
+text-decoration:none; / underline; / line-through; 밑줄
+line-height : 15pt; / 20px; 줄간격
+-------------------------------------------------------------
+
+2. border 속성
+border-color:red; 테두리색상
+border-width:10px; 테두리 두께
+border-style:solid;(실선) / dashed; dotted(점선) / double;(이중선) 테두리 종류
+
+border : 1px solid red; 테두리 축약형
+
+border-top: 3px solid red; / border-bottom / border-left / border-right
+
+border-radius:20px; 둥근사각형
+-------------------------------------------------------------
+
+3. box속성
+width:300px; 가로크기
+height : 150px; 세로크기
+margin : 10px; 컨텐츠기준, 바깥으로 상하좌우 10px 여백이 생성
+margin : 5px 20px; 
+컨텐츠기준, 바깥으로 상하 5px, 좌우 20px 여백 생성
+
+margin: 0 auto; & width:900px; 900px을 기준으로 화면상 가운데 정렬
+
+padding: 5px; 컨텐츠 안쪽에 상하좌우 5px 여백 생성
+padding: 5px 10px 15px 20px;
+             상    우     하    좌(컨텐츠 안쪽에 여백 생성)
+
+box-sizing: border-box;
+-------------------------------------------------------------
+
+4. background 속성
+
+background-color : yellow; 배경색상
+background-image : url("aa.jpg"); 배경이미지
+background-position:center; / left top; / right bottom; /  배경이미지 위치조정
+                                         150px 300px; / 20% 50%;
+background-repeat :no-repeat; / repeat; (default)/ repeat-x; / repeat-y;
+		배경이미지 반복여부
+background-size: cover; / 100%;(비율유지X) / contain; 배경이미지 채우기
+background-attachment:scroll;(default) / fixed; 배경이미지 고정여부
+-------------------------------------------------------------
+
+5. float 속성 
+- 컨텐츠 가로 배치
+float:left; 왼쪽 기준으로, 1,2,3,4.....
+float:right; 오른쪽 기준으로 4,3,2.....
+
+float속성 해제
+- float적용한 컨텐츠를 포함한 부모를 찾아 속성 해제
+ex)  ul{overflow:hidden;}
+      ul li{float:left;}
+
+-------------------------------------------------------------
+선택자(selector)
+
+* - 전체 선택자      ex) *{margin:0; padding:0;}
+. - 클래스             ex) .blue{color:blue;}
+# - 아이디            ex) <div id ="header">
+빈칸 - 후손 선택자  ex) ul li{float:left; width:100px;}
+> - 자식 선택자      
+
+

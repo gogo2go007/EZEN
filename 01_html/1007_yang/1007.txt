@@ -1,0 +1,15 @@
+웹접근성
+웹표준 - 모든 브라우져에서 동일한 레이아웃으로 보이게 설정
+
+<br> 줄바꾸기
+&nbsp; 띄어쓰기
+<h1></h1> 제목태그   1~6
+<p></p>  단락태그
+<b></b> 굵게,  <strong></strong>
+<i></i> 이탤릭체   <em></em>
+<address></address> 주소
+<mark></mark> 형광펜 기능처럼 마킹(배경:노란색)
+<hr> 수평선
+<img src="이미지파일명" alt=""> 이미지 삽입
+<a href="파일명 or 웹사이트주소" target="_blank"></a> 링크걸때
+<iframe></iframe> 유튜브 영상삽입

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+*{ margin:0; padding: 0;}
+img{ border: 0; vertical-align: top;}
+ol,ul,li{ list-style: none;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1; font-family: 'Noto Sans KR', sans-serif;}
+.clearFix::after{ display: block; content: ""; clear: both;}
+
+#header{
+    width: 1000px; margin: 0 auto;
+}
+#header .gnb li{
+    float: left; width: 250px; text-align: center;height: 40px;
+    background-color:#d96d6d; line-height: 40px;
+}
+#header .gnb li a:hover{
+    color: blue;
+}
+
+#section{
+    width: 1000px; margin: 0 auto;
+    background-color: pink; padding: 5px; box-sizing: border-box;
+}
+#section .cont li{
+    float: left;
+    width: 320px;
+    height: 300px;
+    background-color: aquamarine;
+    margin: 5px; line-height: 300px;
+    font-size: 4em; color: #444;
+    text-align: center;
+}
+#footer{
+    width: 1000px; height: 40px; background-color: #333; margin: 0 auto;
+    text-align: center; color: #fff; line-height: 40px;
+}
+
+/*미디어쿼리적용*/
+@media all and (min-width:769px) and (max-width: 1024px){
+    #header{ width: 95%;}
+    #header .gnb li{ width: 25%; background-color: beige;}
+    #section{ width: 95%; background-color: cornflowerblue;}
+    #section .cont li{ width: 48.5%; margin: 0.5%; background-color: darkgoldenrod;}
+    #section .cont li:nth-child(5),
+    #section .cont li:nth-child(6){ display: none;}
+    #footer{ width: 95%; background-color: #777;}
+}
+
+@media all and (max-width: 768px){
+    
+}

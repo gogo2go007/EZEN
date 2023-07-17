@@ -1,0 +1,103 @@
+@charset "UTF-8";
+*{padding: 0; margin: 0;}
+img{ border: 0; vertical-align: top;}
+ol,ul,li{ list-style: none;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1; font-family: 'Noto Sans KR', sans-serif; }
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+#section .service{
+    width: 1500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 80px;
+}
+#section .service h3{
+    font-size: 32px;
+    text-align: center;
+    line-height: 35pt;
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding: 80px 0;
+}
+#section .service h2{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding-bottom: 60px;
+}
+#section .service .ser_m{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#section .service .ser_m li{
+    width: 481px;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+    margin-bottom: 50px;
+    position: relative;
+}
+#section .service .ser_m li h4{
+    text-align: center;
+    padding: 25px 0;
+/*    그라데이션넣기*/
+    background: linear-gradient(-180deg, rgba(246,143,25,1) 0%, rgba(236,104,17,1) 100%);
+    color: #fff;
+    font-size: 23px;
+}
+#section .service .ser_m li h4::before{
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-family:"Font Awesome 6 Free"; /*폰트어썸 fas, far 글꼴 연결*/
+    font-weight: 600;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    display: none;
+    transition: all 0.5s;
+}
+#section .service .ser_m li:first-child h4::before{
+    content: '\f5e4';
+}
+#section .service .ser_m li:nth-child(2) h4::before{
+    content: '\f240';
+    left: 33%;
+}
+#section .service .ser_m li:nth-child(3) h4::before{
+    content: '\f185';
+}
+#section .service .ser_m li:nth-child(4) h4::before{
+    content: '\f1bb';
+}
+#section .service .ser_m li:nth-child(5) h4::before{
+    content: '\f72e';
+    left: 26%;
+}
+#section .service .ser_m li:nth-child(6) h4::before{
+    content: '\f773';
+    left: 28%;
+}
+#section .service .ser_m li:hover h4::before{
+    display: block;
+}
+#section .service .ser_m .ser_m_box{
+    padding: 56px;
+    box-sizing: border-box;
+}
+#section .ser_m .ser_m_box img{
+    padding-bottom: 45px;
+}
+#section .ser_m .ser_m_box p{
+    color: #7c7c7c;
+    font-size: 19px;
+    line-height: 23pt;
+    font-weight: 300;
+}

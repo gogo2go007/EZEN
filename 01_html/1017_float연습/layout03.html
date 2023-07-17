@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃연습</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        a{ text-decoration: none; color: #000;}
+        ol,ul,li{ list-style: none;}
+        img{ border: 0; vertical-align: top;}
+        
+        #header{ width: 1100px; height: 100px; line-height: 100px; margin: 0 auto; border: 1px solid #000; margin-bottom: 10px;}
+        #header .header_wrap{ width: 100%; height: 90px; border-bottom: 1px solid red; }
+        #header .clearFix{ overflow: hidden;}
+        #header .logo{ float: left;}
+        #header .gnb{ float: right;}
+        #header .gnb li{ float: left; margin-left: 40px;}
+        #header .gnb li a{ font-weight: 500; font-size: 18px;}
+        #header .gnb li a:hover{ color: red; text-decoration: underline; }
+        
+        #contents{ width: 1100px; margin: 0 auto; height: 265px; border: 1px solid #000;}
+        #contents .contents_wrap{ width: 100%; height: 250px;  padding: 60px;}
+        #contents .contents_wrap li{ width: 326px;  height: 130px; text-align: center; float: left; }
+        #contents .contents_wrap li h2{ padding-bottom: 30px; margin-top: 20px;}
+        #contents .border{ border-right: 1px solid #c4c4c4; border-left: 1px solid #c4c4c4;}
+        #contents .line{width: 99%; margin: 0 auto; border-bottom: 1px solid #a1a1ff;}
+        
+        #footer{ width: 1100px; margin: 0 auto; border: 1px solid #000; padding: 20px 0; text-align: center; margin-top: 10px; font-weight: 600;}
+        
+    </style>
+</head>
+<body>
+    <div id="header" class="clearFix">
+       <div class="header_wrap">
+            <h1 class="logo">이젠아카데미</h1>
+            <ul class="gnb">
+                <li><a href="#">학원소개</a></li>
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">커뮤니티</a></li>
+                <li><a href="#">클럽</a></li>
+            </ul>
+       </div>
+    </div>
+    <div id="contents" class="clearFix">
+        <ul class="contents_wrap">
+            <li><h2>왼쪽 컨텐츠</h2><p>왼쪽 내용입니다.</p></li>
+            <li class="border"><h2>가운데 컨텐츠</h2><p>가운데 내용입니다.</p></li>
+            <li><h2>오른쪽 컨텐츠</h2><p>오른쪽 내용입니다.</p></li>
+        </ul>
+       <div class="line"></div>               
+    </div>
+    <div id="footer">
+        <address>경기도 고양시 일산동구 장항동 마두법조빌딩 9층 이젠아카데미</address>
+    </div>
+</body>
+</html>

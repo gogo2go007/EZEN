@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃 두번째 시간</title>
+    <style type="text/css">
+        #header{
+            width: 900px;
+            height: 100px;
+            background-color: #ffd2ba;
+            font-size: 2em;
+            text-align: center;
+            line-height: 100px;
+        }
+        #section{
+            width: 900px;
+            background-color: pink;
+            overflow: hidden;
+            line-height: 250px;
+            text-align: center;
+        }
+        #section .box1{
+            width: 250px;
+            height: 250px;
+            border: 1px solid #fff;
+            margin: 5px;
+            float: left;
+        }
+        #section .box2{
+            width: 381px;
+            height: 250px;
+            border: 1px solid #fff;
+            float: left;
+            margin: 5px;
+        }
+        #footer{
+        width: 900px;
+        height: 100px;
+        background-color: #baddff;
+        font-size: 2em;
+        text-align: center;
+        line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">HEADER</div>
+    <div id="section">
+        <div class="box1">CONTENTS01</div>
+        <div class="box1">CONTENTS02</div>
+        <div class="box1">CONTENTS03</div>
+        <div class="box2">CONTENTS04</div>
+        <div class="box2">CONTENTS05</div>
+        <div class="box1">CONTENTS06</div>
+        <div class="box1">CONTENTS07</div>
+        <div class="box1">CONTENTS08</div>
+    </div>
+    <div id="footer">FOOTER</div>
+</body>
+</html>

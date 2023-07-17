@@ -1,0 +1,250 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0}
+img{ border: 0; vertical-align: top;}
+ol,ul,li{ list-style: none;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1;}
+
+.clearFix::after{ content: ""; display: block; clear: both; }
+.center{ width: 980px; margin: 0 auto;}
+
+/*
+@font-face {
+      font-family: "marzo-w00-regular,fantasy;";
+      src: url("절대경로 및 상대경로 주소");*/
+
+#header{
+    width: 100%;
+    height: 992px;
+    background: url(img/ad7b01298cb542c1bfcf925581b4755a.jpg) no-repeat center center;
+    background-size: cover;
+
+}
+#header .h_bg{
+    width: 100%;
+    height: 79px ;
+    background-color: #333;
+    border-bottom: 3px solid pink;
+    position: fixed;
+    z-index: 3;
+}
+#header .h_menu{
+    line-height: 76px;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 4;
+}
+#header .h_menu .logo a{
+    font-weight: normal;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+    margin-left: 20px;
+}
+#header .gnb{
+    float: left;
+    margin-left: 20px;
+}
+#header .gnb li{
+    float: left;
+    margin: 0 10px;
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+}
+#header .gnb li a{
+    color: pink;
+    font-size: 13px;
+}
+#header .gnb li::before{
+    display: block;
+    content: "";
+    width: 110%;
+    height: 4px;
+    background-color: #fff;
+    margin-top: 3px;
+    position: absolute;
+    left: -3px;
+    top: 7px;
+    display: none;
+    transition: all 0.5s;
+}
+#header .gnb li:first-child::before{
+    display: block;
+}
+#header .gnb li:hover::before{
+    display: block;
+}
+#header .gnb li:hover a{
+    color: red;
+}
+#header .cont{
+    position: relative;
+    top: 100px;
+   
+}
+#header .cont_left{
+    float: left;
+    width: 50%;
+    height: 910px;
+    position: absolute;
+    left: 67px;
+    top: 50%;
+    z-index: 2;
+}
+#header .cont_left span{
+    font-size: 50px; 
+    line-height: 770px;
+}
+#header .cont_right{
+    float: left;
+    width: 100%;
+    position: absolute;
+    left: 37%;
+}
+#header .cont_right span{
+    color: #fff;
+    padding-left: 430px;
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#header .cont_right h2{
+    color: #fff;
+    font-size: 320px;
+    font-weight: bold;
+    letter-spacing: -28px;
+}
+#header .cont_right>p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 17pt;
+    padding-left: 26px;
+}
+#header .cont_r_t{
+    padding-top: 115px;
+    position: relative;
+    top: 52px;
+}
+#header .cont_r_t li{
+    float: left;
+}
+#header .cont_r_t li:first-child{
+    font-size: 42px;
+    color: #fff;
+    padding-left: 25px;
+    position: relative;
+    top: 11px;
+}
+#header .cont_r_t li:last-child{
+    font-size: 30px;
+    padding-top: 48px;
+    letter-spacing: -1px;
+}
+#section{
+    width: 100%;
+    height: 1150px;
+    background-color: #f2f2f2;
+}
+#section h2{
+    text-align: center;
+    padding: 60px 0 20px 60px;
+}
+#section .sec_list{
+
+}
+#section .sec_list li{
+    float: left;
+}
+#section .sec_list li:first-child{
+    margin-right: 16px;
+}
+
+#section .sec_box1{
+    position: relative;
+}
+#section .sec_box1 .text{
+    background-color: #fff;
+    padding: 70px 60px 30px 70px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 66px;
+    left: 37px;
+}
+#section .sec_box1 .text h3{
+    font-size: 15px;
+    font-weight: 600;
+}
+#section .sec_box1 .text h3::after{
+    display: block;
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: pink;
+    margin-top: 27px;
+}
+#section .sec_box1 .text p{
+    font-size: 14px;
+    line-height: 16pt;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#section .sec_box1 .text img{
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+#section .sec_box1 .img_box{
+    width: 456px;
+    height: 580px;
+    padding-top: 300px;
+}
+#section .sec_box1 .img_box img{
+    width: 100%;
+}
+#section .sec_box2{
+    position: relative;
+}
+#section .sec_box2 .text{
+    background-color: #fff;
+    padding: 70px 60px 30px 70px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -316px;
+    right: 37px;
+}
+#section .sec_box2 .text img{
+    width: 30px;
+    height: 20px;
+    padding-left: 257px;
+    cursor: pointer;
+}
+#section .sec_box2 .text h3::after{
+    display: block;
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: pink;
+    margin-top: 27px;
+}
+#section .sec_box2 .text p{
+    font-size: 14px;
+    line-height: 16pt;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#section .sec_box2 .img_box{
+    margin-top: 100px;
+}
+#footer{
+    background-color: #cccccc;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+

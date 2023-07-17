@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도르코마이쉐프</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 메뉴영역
+            $(".gnb > li").hover(function(){
+                $(this).children(".depth2").stop().slideToggle();
+            });
+
+            // 슬라이드영역
+            // 변수선언_필요한 변수: 1.위치값 / 2.가로값 wid
+            var i = 0;
+            var wid = $(".visual").width();
+
+            $(".pager li").click(function(){
+                // i 변수는 클릭했을 때 this의 위치값
+                i = $(this).index();
+                $(".pager li").removeClass("on");
+                // i의 위치값에 담긴 값 = eq(i)
+                $(".pager li").eq(i).addClass("on");
+                $(".panel").stop().animate({"margin-left": -wid * i},500);
+            });
+
+            //캐러셀영역
+            $(".recipe_right").click(function(e){
+                // 클릭했을때 위로 자동이동하는 현상 잡아줌
+                e.preventDefault();
+                // .recipe_panel은 두번째li로 보이는 지금 현 좌표 -33.333%
+                // 보다 좌표를 -33.333% 더 이동해야하므로
+                // -66.666% 이동 그 후에 functiond은
+                $(".recipe_panel").stop().animate({"margin-left":"-66.666%"},function(){
+                    // 첫번째 .recipe_panel li을 .recipe_panel의 마지막에 붙인다.
+                    $(".recipe_panel li").first().appendTo(".recipe_panel");
+                    // .recipe_panel의 좌표를 다시 -33.333%로 바꿔준다.
+                    $(".recipe_panel").css({"margin-left":"-33.333%"});
+                });
+            });
+            $(".recipe_left").click(function(e){
+                e.preventDefault();
+                $(".recipe_panel").stop().animate({"margin-left":"0%"},function(){
+                    // 마지막 .recipe_panel li을 .recipe_panel의 처음에 붙인다.
+                    $(".recipe_panel li").last().prependTo(".recipe_panel");
+                    $(".recipe_panel").css({"margin-left":"-33.333%"});
+                });
+            });
+
+            // top버튼 영역
+            // 스크롤바를 내리면
+            $(window).scroll(function(){
+                // 내 스크롤의 위치가 100보다 작으면
+                if($(this).scrollTop() > 100){
+                    // .top_btn이 나타난다.
+                    $(".top_btn").stop().fadeIn();
+                }
+                // 그렇지 않으면
+                else{
+                    // .top_btn이 사라진다.
+                    $(".top_btn").stop().fadeOut();
+                }
+            });
+
+            // .top_btn을 클릭했을때
+            $(".top_btn").click(function(){
+                // html, body 브라우저(크롬 사파리등) 다 정상 작용하기 위해 두개 다 쓴다
+                // 스크롤의 위치를 0으로(상단)으로 이동시킨다.
+                $("html,body").stop().animate({scrollTop:0},500);
+            });
+
+         
+
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="h_top">
+            <a href="#"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="h_m">
+            <div class="gnb_bg"></div>
+            <ul class="gnb clearFix">
+                <li>
+                    <a href="#">브랜드</a>
+                    <ul class="depth2">
+                        <li><a href="#">About DORCO mychef</a></li>
+                        <li><a href="#">도루코 마이셰프 캠페인</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">지난 樂캠페인</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">제품</a>
+                    <ul class="depth2">
+                        <li><a href="#">신제품소개</a></li>
+                        <li><a href="#">칼</a></li>
+                        <li><a href="#">가위</a></li>
+                        <li><a href="#">냄비</a></li>
+                        <li><a href="#">프라이팬</a></li>
+                        <li><a href="#">주방악세사리</a></li>
+                        <li><a href="#">제품사용가이드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">레시피</a>
+                    <ul class="depth2">
+                        <li><a href="#">레시피 ALL</a></li>
+                        <li><a href="#">Color 레시피</a></li>
+                        <li><a href="#">Health 레시피</a></li>
+                        <li><a href="#">Dream 레시피</a></li>
+                        <li><a href="#">쿠킹 樂트래블 레시피</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">이벤트</a>
+                    <ul class="depth2">
+                        <li><a href="#">진행중 이벤트</a></li>
+                        <li><a href="#">쇼핑 기획전</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                    <ul class="depth2">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">매장안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="visual">
+                <ul class="panel clearFix">
+                    <li><a href="#"><img src="img/visual_01.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/visual_02.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/visual_03.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/visual_04.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/visual_05.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/visual_06.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/visual_07.jpg" alt="img"></a></li>
+                </ul>
+                <ul class="pager">
+                    <li class="on"><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="section">
+        <div class="vd_wrap">
+            <div class="vd_contents center">
+                <img src="img/title_aboutus.png" alt="title">
+                <h3>도루코 마이셰프 2022 캠페인 영상</h3>
+                <div class="vd_box">
+                    <div class="vd_txt">
+                        <h4>요리하는 즐거움을<br>
+                            누구에게나<br><br>
+                            모두에게 요리가<br>
+                            즐거운 놀이처럼<br>
+                            느껴지도록<br>
+                        </h4>
+                        <p>어떤 요리도 즐겁게 할 수 있는<br>
+                            주방용품 전문 브랜드<br>
+                            도루코 마이셰프를 소개합니다.
+                        </p>
+                    </div>
+                    <div class="vd_video">
+                        <iframe width="910px" height="513px" src="https://www.youtube.com/embed/aNcKFD9Ij4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recipe">
+            <div class="recipe_txt center">
+                <img src="img/title_recipe.png" alt="recipe_title">
+                <h3>도루코 마이셰프의 다양한 제품으로 만들어 낸 요리를 즐겨보세요</h3>
+                <div class="recipe_caroucel ">
+                    <ul class="recipe_panel clearFix">
+                        <li><img src="img/color21.png" alt="img"></li>
+                        <li><img src="img/color22.png" alt="img"></li>
+                        <li><img src="img/color23.png" alt="img"></li>
+                        <li><img src="img/color24.png" alt="img"></li>
+                        <li><img src="img/color25.png" alt="img"></li>
+                        <li><img src="img/color26.png" alt="img"></li>
+                        <li><img src="img/color27.png" alt="img"></li>
+                        <li><img src="img/color28.png" alt="img"></li>
+                        <li><img src="img/color23.png" alt="img"></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="recipe_left"><a href="#"><img src="img/recipe_btn_prev.png" alt="btn"></a></button>
+            <button class="recipe_right"><a href="#"><img src="img/recipe_btn_next.png" alt="btn"></a></button>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer_wrap center">
+            <p>COPYRIGHT(C)2017 DORCOLIVING ALL RIGHT RESERVED</p>
+            <div class="top_btn"><a href="#"><img src="img/btn_top.png" alt="btn"></a></div>
+        </div>
+    </div>
+    
+</body>
+</html>

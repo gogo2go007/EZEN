@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form태그 활용해 보기</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        fieldset{ width: 650px; border: 1px solid #c6c6c6; margin-left: 20px; padding-left: 10px; box-sizing: border-box; line-height: 30px;}
+        legend{ background-color: #d0d0d0; color: #fff; text-align: center; padding: 5px 20px; }
+
+        input{ outline: none; border: rgba(51, 51, 51, 0);}
+        input[type="text"]{  border: 1px solid rgba(201, 201, 201, 0); border-bottom:  1px solid rgba(201, 201, 201, 50); width: 150px; height: 25px;}
+        input[type="password"]{ border: 1px solid #c9c9c9; width: 150px; height: 25px;}
+        textarea{ outline: none; border: 1px solid #c9c9c9; width: 500px; height: 200px;}
+        
+  
+        .box{
+            width: 200px; height: 50px;
+            background-color: aquamarine;
+            animation: move 3s infinite;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            letter-spacing: 10px;
+            transform:  rotate(-90deg);
+            top: 80px; left: -20px;
+/*            transform-origin: 50px 60px;*/
+        }
+        @keyframes move{
+            0%{
+                top: 80px; 
+            }
+            50%{
+                top: 120px;
+                opacity: 0.7;
+                background-color: palevioletred;
+            }
+            100%{
+                top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">animation</div><br><br>
+        <h1 class="main_title">회원가입페이지</h1>
+    </header>
+    <section>
+        <form action="#" method="">
+            <fieldset>
+                <legend>회/원/가/입</legend>
+<!--                텍스트타입-->
+                <label for="name">이름 :</label> 
+                <input type="text" id="name" name="name"><br>
+                <label for="age">생년월일 :</label> 
+                <input type="text" id="age" name="name" placeholder="생년월일8자리"><br>
+                <label for="identity">아이디 : </label>
+                <input type="text" id="identity" name="identity" placeholder="특수문자포함8자리"><br>
+                
+<!--                패스워드-->
+                <label for="pw">비밀번호 : </label>
+                <input type="password" id="pw" name="pw" placeholder="비밀번호를 입력하세요"><br>
+                
+<!--                이메일 옵션박스-->
+                <label for="email">이메일 : </label>
+                <input type="text" id="email" name="email" placeholder="비밀번호를 입력하세요">@
+                <select name="" id="">
+                    <option value="">naver.com</option>
+                    <option value="">daum.com</option>
+                    <option value="">google.com</option>
+                    <option value="">empas.com</option>
+                    <option value="">직접입력</option>
+                </select><br>
+                
+<!--                라디오버튼-->
+                <label for="send">메일수신여부 : </label>
+                <input type="radio" id="send" name="send" checked>예
+                <input type="radio" id="send" name="send">아니요<br>
+                
+                
+<!--                체크박스버튼-->
+                <label for="favorite">관심분야 : </label>
+                <input type="checkbox" id="favorite" name="favorite1">인테리어
+                <input type="checkbox" id="favorite" name="favorite2">독서
+                <input type="checkbox" id="favorite" name="favorite3">자동차
+                <input type="checkbox" id="favorite" name="favorite4"> 패션
+                <input type="checkbox" id="favorite" name="favorite5">쥬얼리
+                
+<!--                자기소개텍스트상자-->
+                <label for="introduce">자기소개</label><br>
+                <textarea name="" id="" cols="70" rows="5"></textarea><br>
+                
+<!--                버튼-->
+               <input type="submit" value="전송">
+               <input type="reset" value="초기화">
+               <input type="button" value="확인">
+            </fieldset>    
+        </form>
+    </section>
+    <footer></footer>
+</body>
+</html>

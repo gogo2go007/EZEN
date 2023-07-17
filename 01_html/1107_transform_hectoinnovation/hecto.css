@@ -1,0 +1,389 @@
+@charset "UTF-8";
+*{ margin: 0; padding: 0;}
+img{ border: 0; vertical-align: top;}
+ol,ul,li{list-style: none;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1; font-family: 'Noto Sans KR','Roboto', sans-serif; }
+.clearFix::after{ display: block; content: ""; clear: both;}
+.center{ width: 1520px; margin: 0 auto;}
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+#section .history{
+    position: relative;
+}
+#section .history .hs_line{
+    width: 100%;
+    border-top: 1px solid rgba(208, 208, 208, 0.3);
+    position: absolute;
+    top: 287px;
+    left: 0;
+}
+#section .history .history_wrap{
+    width: 1320px;
+    margin: 0 auto;
+}
+#section .history h2{
+    font-weight: 100;
+    font-size: 45px;
+    letter-spacing: -1px;
+    padding: 60px 0;
+    line-height: 47pt;
+    color: #505050;
+}
+#section .history h2 span{
+    font-weight: bold;
+}
+#section .history .hs_m li{
+    float: left;
+    margin-right: 65px;
+    position: relative;
+}
+#section .history .hs_m li.on a{
+    color: #faa61a;
+}
+#section .history .hs_m li.on a::after{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #faa61a;
+    margin-top: 22px;
+}
+#section .history .hs_m li a{
+    font-size: 20px;
+    color: #ccc;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+#section .history .hs_m li a::after{
+    display: block;
+    content: "";
+    width: 0%;
+    height: 1px;
+    margin-top: 22px;
+    background-color: #faa61a;
+    transition: all 0.5s;
+}
+#section .history .hs_m li:hover a::after{
+    width: 100%;
+}
+.history .hs_contents{
+    text-align: center;
+}
+#section .history .hs_con_wrap{
+    border-bottom: 1px solid #cccccc;
+}
+#section .history .hs_con_wrap .hs_contents h2{
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 54px;
+    color: #333;
+    padding: 40px 0 30px 0;
+}
+#section .history .hs_con_wrap .hs_contents p{
+    color: #333;
+    font-size: 21px;
+}
+.history .hs_contents .hs_con_m{
+    width: 580px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding-bottom: 100px;
+}
+.history .hs_contents .hs_con_m li{
+    float: left; 
+    width: 170px;
+    height: 59px;
+    margin-right: 20px;
+    border: 1px solid #faa61a;
+    border-radius: 50px 0 50px 50px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    line-height: 59px;
+    box-sizing: border-box;
+}
+.history .hs_contents .hs_con_m li::before{
+    display: block;
+    content: "";
+    width: 170px;
+    height: 59px;
+    background-color:red;
+    position: absolute;
+    top: 0px;
+    left: -179px;
+    transition: all 0.8s;
+}
+.history .hs_contents .hs_con_m li:hover::before{
+    left: 0;
+}
+.history .hs_contents .hs_con_m li a{
+    color: #faa61a;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.history .hs_contents .hs_con_m li:hover {
+/*    border: none;*/
+}
+.history .hs_contents .hs_con_m li:hover a{
+    color: #fff;
+}
+.history .hs_contents .hs_con_m li.on{
+    background-color:  #faa61a;
+}
+.history .hs_contents .hs_con_m li.on a{
+    color: #fff;
+}
+
+
+#section .vision{
+    position: relative;
+    overflow: hidden;
+}
+#section .vision .vision_txt{
+    color: #f8f8f8;
+    font-size: 340px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -10px;
+    position: absolute;
+    top: -29px;
+    right: -418px;
+}
+
+#section .vision .vision_box{
+    margin-top: 120px;
+    position: relative;
+    z-index: 3;
+}
+#section .vision .vision_box>h2{
+    font-size: 60px;
+    letter-spacing: -3px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 60px;
+}
+#section .vision .vision_box>p{
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 28pt;
+    color: #575757;
+    text-align: center;
+    margin-bottom: 80px;
+}
+#section .vision_box>span{
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    color: #faa61a;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;  
+    margin-bottom: 60px;
+}
+.vision .vision_box .vs_btn{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #faa61a;
+    z-index: 10;
+    cursor: pointer; 
+}
+.vision .vision_box .vs_btn span{
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    top: 21%;
+    left: 36%;
+    transition: all 0.5s;
+}
+.vision .vision_box .vs_btn:hover span{
+    transform: rotate(360deg);
+}
+/*애니메이션 영역*/
+.vision .vision_box .vs_btn .vs_btn_bg1{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #faa61a;
+    position: absolute;
+    top: -8%;
+    left: -7%;
+    box-sizing: border-box;
+    animation: zoom 1.5s infinite;
+} 
+.vision .vision_box .vs_btn .vs_btn_bg2{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #faa61a;
+    position: absolute;
+    top: -8%;
+    left: -7%;
+    box-sizing: border-box;
+    animation: zoom 1.5s infinite 0.5s;
+} 
+.vision .vision_box .vs_btn .vs_btn_bg3{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #faa61a;
+    position: absolute;
+    top: -8%;
+    left: -7%;
+    box-sizing: border-box;
+    animation: zoom 1.5s infinite 0.7s;
+} 
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.8); opacity: 0;
+    }
+}
+.vision .vision_box .vs_contents{
+        margin-top: 150px;
+    }
+.vision .vs_contents{
+    display: flex;
+    padding: 0px 95px;
+    padding-bottom: 190px;
+}
+.vision .vs_contents li{
+    width: 640px;
+    height: 640px;
+    background: url(img/main_company_img_01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 50px;
+    border-radius: 0 0 120px 0px;
+}
+.vision .vs_contents li:first-child{
+    margin-top: 160px;
+}
+.vision .vs_contents li:last-child{
+    margin-right: 0;
+    background-image: url(img/main_company_img_02.jpg);
+}
+.vision .vs_contents .vs_txt{
+    padding: 80px;
+    box-sizing: border-box;
+}
+.vision .vs_contents .vs_txt span{
+    color: #faa61a;
+    font-size: 19px;
+    font-weight: 500;
+}
+.vision .vs_contents .vs_txt h2{
+    margin: 60px 0 40px 0;
+    font-size: 54px;
+    color: #fff;
+    letter-spacing: -1px
+}
+.vision .vs_contents .vs_txt p{
+    color: #c9c8c8;
+    font-size: 19px;
+    line-height: 23pt;
+    font-weight: 500;
+}
+
+#section .service{
+    width: 100%;
+}
+#section .service .service_img{
+    width: 100%;
+    height: 912px;
+    background-image: url(img/main_service_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#section .service_box li{
+    width: 20%;
+    height: 912px;
+    float: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    color: #fff;
+
+    box-sizing: border-box;
+    position: relative;
+}
+#section .service_box li:last-child{
+    border-right: none;
+}
+#section .service_box .ser_list_bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+#section .service_box li:hover .ser_list_bg{
+    background-color: rgb(239,123,38,0.9);
+}
+#section .service_box .ser_txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
+}
+#section .service_box li:hover .ser_txt{
+    opacity: 1;
+}
+#section .service_box .ser_txt .ser_txt_img{
+    font-size: 35px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+/*호버시 애니메이션 구간*/
+#section .service_box li:hover .ser_txt_img i{
+     animation: rotate_image 1s linear;
+}
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(360deg);
+    }
+}
+#section .service_box .ser_txt .ser_txt_img_h{
+    font-size: 35px;
+    color: #fff;
+    padding-bottom: 30px;
+    display: none;
+}
+/*
+#section .service_box li:hover .ser_txt_img_h{
+    display: block;
+}
+*/
+#section .service_box .ser_txt h2{
+    font-size: 35px;
+    padding-bottom: 70px;
+    letter-spacing: -1px;
+}
+#section .service_box .ser_txt p{
+    font-size: 18px;
+    line-height: 22pt;
+    opacity: 1;
+    font-weight: 300;
+    letter-spacing: -1px;
+}

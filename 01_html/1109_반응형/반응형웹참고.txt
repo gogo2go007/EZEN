@@ -1,0 +1,20 @@
+
+반응형웹
+https://offbyone.tistory.com/110
+
+https://offbyone.tistory.com/121
+
+반응형 웹 사이즈
+~1320px
+~1150px
+pc버전
+~769px~1024px
+모바일
+0~786px
+~640px
+~480px
+
+
+사이즈 계산하기
+5/1000*100
+구할 사이즈 / 전체 사이즈 *100

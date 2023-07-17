@@ -1,0 +1,20 @@
+**폼태그
+
+<label for="name">이름 :</label> 
+<input type="text" id="name" name="name"><
+ for=이름표 id=이름표 같게 연결해줘야함
+
+라디오버튼 속성시
+name을 맞춰줘야 그룹으로 묶여서 선택 가능함
+
+여러가지 옵션은
+<select name="" id="">
+    <option value="">naver.com</option>
+    <option value="">daum.com</option>
+    <option value="">직접입력</option>
+</select>
+
+속성선택자
+input{ outline: none;} >인풋전체적용
+input[type="text"]{ border: 1px solid #c9c9c9; width: 150px; height: 25px;}
+인풋에 텍스트만 적용

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체메뉴스르륵</title>
+    <link rel="stylesheet" href="1117_style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // class on 붙이기
+            $("#header .gnb").mouseenter(function(){
+                $("#header .gnb").addClass("on");
+            });
+             // class on 떼기
+            $("#header .gnb").mouseleave(function(){
+                $("#header .gnb").removeClass("on");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="hd_wrap clearFix">
+            <h1 class="logo">LOGO</h1>
+            <ul class="gnb clearFix">
+                <li>
+                    <a href="#">메인메뉴01</a>
+                    <ul class="depth2">
+                        <li><a href="#">서브메뉴01_1</a></li>
+                        <li><a href="#">서브메뉴01_2</a></li>
+                        <li><a href="#">서브메뉴01_3</a></li>
+                        <li><a href="#">서브메뉴01_4</a></li>
+                    </ul> 
+                </li>
+                <li>
+                    <a href="#">메인메뉴02</a>
+                    <ul class="depth2">
+                        <li><a href="#">서브메뉴02_1</a></li>
+                        <li><a href="#">서브메뉴02_2</a></li>
+                        <li><a href="#">서브메뉴02_3</a></li>
+                        <li><a href="#">서브메뉴02_4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴03</a>
+                    <ul class="depth2">
+                        <li><a href="#">서브메뉴03_1</a></li>
+                        <li><a href="#">서브메뉴03_2</a></li>
+                        <li><a href="#">서브메뉴03_3</a></li>
+                        <li><a href="#">서브메뉴03_4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴04</a>
+                    <ul class="depth2">
+                        <li><a href="#">서브메뉴04_1</a></li>
+                        <li><a href="#">서브메뉴04_2</a></li>
+                        <li><a href="#">서브메뉴04_3</a></li>
+                        <li><a href="#">서브메뉴04_4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

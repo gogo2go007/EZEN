@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대메뉴</title>
+    <style type="text/css">
+        *{
+            margin: 0; padding: 0;
+        }
+        ol,ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        img{
+            border: 0; 
+            vertical-align: top;
+        }
+        body,html{
+        font-family: 'Malgun Gothic';
+        box-sizing: border-box;
+    }
+        #header{
+            width: 1100px;
+            height: 90px;
+            margin: 0 auto;
+            background-color: bisque;
+            margin-bottom: 40px;
+        }
+        #header .header_wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #header .header_wrap .logo{
+            width: 140px;
+            padding: 30px 0;
+        }
+        #header .header_wrap .gnb{
+            display: flex;
+            padding: 30px 0;
+        }
+        #header .header_wrap .gnb li{
+            padding-left: 36px;
+        }
+        #header .header_wrap .gnb li a:hover{
+            color: #01A251;
+        }
+        #header .header_wrap .pc_global ul{
+            display: flex;
+        }
+        #header .header_wrap .pc_global ul li{
+            padding-left: 10px;
+        }
+        #header .header_wrap .pc_global ul li:nth-child(3){
+            padding-right: 20px;
+        }
+        #header .header_wrap .pc_global ul li img{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="header_wrap">
+             <div class="logo">
+                 <a href="#"><img src="logo.svg" alt="로고"></a>
+             </div>
+         <ul class="gnb">
+             <li><a href="#">사업소개 · 혁신기술</a></li>
+             <li><a href="#">투자 · 가치경영</a></li>
+             <li><a href="#">인재채용</a></li>
+             <li><a href="#">회사소개</a></li>
+         </ul>
+         <div class="pc_global">
+             <ul>
+                 <li><a href="#"><img src="search.svg" alt=""></a></li>
+                 <li><a href="#"><img src="global.svg" alt=""></a></li>
+                 <li><a href="#">H 두드림</a></li>
+                 <li><a href="#"><img src="full_menu_icon2.png" alt=""></a></li>
+             </ul>
+         </div>  
+        </div>
+     </div>
+</body>
+</html>

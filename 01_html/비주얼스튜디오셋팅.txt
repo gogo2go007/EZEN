@@ -1,0 +1,12 @@
+
+
+
+비주얼 스튜디오 셋팅
+https://code.visualstudio.com/
+
+확장 프로그램
+live server
+auto close tag
+color highlight
+css peek
+indent-rainbow

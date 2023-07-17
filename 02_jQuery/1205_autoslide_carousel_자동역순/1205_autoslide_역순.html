@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autoslide_역순</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            // 변수 지정
+            // 순서를 찾아내기 위한 변수
+            var i = 0;
+            // 가로값을 구하기 위한 변수
+            var wid = $(".slide").width();
+            // panel의 갯수_ if문에서 범위 한정하기 위한 변수
+            var count = $(".panel li").length;
+
+           $(".btn li").click(function(){
+                i = $(this).index();
+                slideMove();
+           });
+
+           $(".next").click(function(){
+                if(i == count-1){
+                    i = 0; 
+                }
+                else{
+                    i++;
+                }
+                slideMove();
+           });
+
+           $(".prev").click(function(){
+                if(i == 0){
+                    i = count-1; 
+                }
+                else{
+                    i--;
+                }
+                slideMove();
+           });
+
+           // 슬라이드 자동으로 움직이기 위한 문구
+           var autoslide = setInterval(function(){
+            if(i == count-1){
+                    i = 0; 
+                }
+                else{
+                    i++;
+                }
+               
+                slideMove();           
+
+           }, 3000);
+
+           // 슬라이드 마우스 올렸을때 멈추기위한 문구
+           $(".slide").mouseenter(function(){
+                clearInterval(autoslide);
+                });
+           
+            // 마우스 떠났을때 다시 재개    
+           $(".slide").mouseleave(function(){
+                autoslide = setInterval(function(){
+                    if(i == count-1){
+                            i = 0; 
+                        }
+                        else{
+                            i++;
+                        }
+                    
+                        slideMove();
+
+                },3000);
+
+           });
+
+           // 함수 선언_ 공통적으로 들어가는 움직임
+           function slideMove(){
+                $(".btn li").removeClass("on");
+                $(".btn li").eq(i).addClass("on");
+                // $(".panel").stop().animate();
+                $(".panel").stop().animate({"margin-left": -wid*i});
+           }
+
+          
+
+        });
+    </script> -->
+</head>
+<body>
+    <section>
+        <div class="slide">
+            <ul class="panel clearFix">
+                <li><a href="#">contents 01</a></li>
+                <li><a href="#">contents 02</a></li>
+                <li><a href="#">contents 03</a></li>
+                <li><a href="#">contents 04</a></li>
+            </ul>
+            <ul class="btn clearFix">
+                <li class="on">1<a href="#"></a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+            <p class="prev">&lt;</p>
+            <p class="next"> &gt;</p>
+        </div>
+    </section>
+</body>
+</html>

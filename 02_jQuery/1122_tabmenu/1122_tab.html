@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴활용</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ol,ul,li{ list-style: none;}
+        a{ text-decoration: none; color: #000; display: block;}
+        .clearFix::after{ display: block; content: ""; clear: both;}
+
+        .tab_wrap{ width: 800px; height: 500px; margin: 0 auto; background-color: pink;}
+        .tab_wrap .tab_menu > li{ float: left; width: 200px; height: 50px; line-height: 50px; text-align: center;}
+        .tab_wrap .tab_menu > li:hover,
+        .tab_wrap .tab_menu > li.active{ background-color: orange; }
+        .tab_wrap .tab_menu > li.active > a,
+        .tab_wrap .tab_menu > li:hover a{ color: #fff;}
+
+        .tab_wrap .tab_contents{ position: relative; height: 400px; text-align: center; font-size: 3em; line-height: 350px;}
+        .tab_wrap .tab_contents li{ width: 800px; height: 400px; position: absolute; left: 0; top: 0; display: none;}
+        .tab_wrap .tab_contents li:nth-child(1){ background-color: aquamarine; display: block;}
+        .tab_wrap .tab_contents li:nth-child(2){ background-color: burlywood;}
+        .tab_wrap .tab_contents li:nth-child(3){ background-color: yellowgreen;}
+        .tab_wrap .tab_contents li:nth-child(4){ background-color: brown;}
+    </style>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 변수선언
+            var i = 0;
+            // var i = $(".tab_menu>li.active").index(); 같은의미
+
+            $(".tab_menu > li").click(function(){
+                  //    예를들어 3번째를 클릭했을때 위치값 i=2;기억
+               i = $(this).index(); 
+            //    모든 li에 active 클래스 없애기
+                $(".tab_menu > li").removeClass("active");
+                // "위치값+1"에 해당하는 컨텐츠에 active클래스 적용해주기
+                $(".tab_menu > li").eq(i).addClass("active");
+                // 모든 컨텐츠 영역 감추기
+                $(".tab_contents > li").stop().fadeOut();
+                // "위치값+1"에 해당하는 컨텐츠 영역만 보이기
+                $(".tab_contents > li").eq(i).stop().fadeIn();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="tab_wrap">
+            <ul class="tab_menu clearFix">
+                <li class="active"><a href="#">신상품</a></li>
+                <li><a href="#">인기상품</a></li>
+                <li><a href="#">베스트상품</a></li>
+                <li><a href="#">MD추천</a></li>
+            </ul>
+            <ul class="tab_contents">
+                <li>신상품컨텐츠영역</li>
+                <li>인기상품컨텐츠영역</li>
+                <li>베스트상품컨텐츠영역</li>
+                <li>MD추천컨텐츠영역</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

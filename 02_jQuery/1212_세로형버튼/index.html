@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로형버튼클릭시부드럽게이동</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var pos1 = $("#box1").offset().top; //0~699px i>=pos1, i<pos2 둘다 만족해야함
+            var pos2 = $("#box2").offset().top; //
+            var pos3 = $("#box3").offset().top;
+            var pos4 = $("#box4").offset().top;
+            var pos5 = $("#box5").offset().top;
+            
+            $(window).scroll(function(){
+                // 내 스크롤 높이값
+                var sc = $(this).scrollTop();
+
+                $(".menu li").removeClass("on");
+                // 첫번째 활성화
+                if(sc >= pos1 && sc < pos2){
+                    $(".menu li").eq(0).addClass("on");
+                }
+                // 두번째 활성화
+                else if(sc >= pos2 && sc < pos3){
+                    $(".menu li").eq(1).addClass("on");
+                }
+                // 세번째 활성화
+                else if(sc >= pos3 && sc < pos4){
+                    $(".menu li").eq(2).addClass("on");
+                }
+                // 네번째 활성화
+                else if(sc >= pos4 && sc < pos5){
+                    $(".menu li").eq(3).addClass("on");
+                }
+                // 다섯번째 활성화
+                else{
+                    $(".menu li").eq(4).addClass("on");
+                }
+            });
+
+            $(".menu li").click(function(e){
+                e.preventDefault();
+                var list = $(this).children("a").attr("href");
+                var place = $(list).offset().top;
+
+                $("body,html").stop().animate({"scrollTop":place},500);
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ol,ul,li {list-style: none;}
+        a {text-decoration: none; color: #000;}
+        
+        #box1 {width: 100%; height: 700px; font-size: 5em; background-color: aquamarine;}
+        #box2 {width: 100%; height: 1000px; font-size: 5em; background-color: pink;}
+        #box3 {width: 100%; height: 500px; font-size: 5em; background-color: yellow;}
+        #box4 {width: 100%; height: 900px; font-size: 5em; background-color: green;}
+        #box5 {width: 100%; height: 1200px; font-size: 5em; background-color: violet;}
+
+        .menu {position: fixed; right: 30px; top: 40%;}
+        .menu li {width: 20px; height: 20px; background-color: aliceblue; border-radius: 50%; margin: 6px; cursor: pointer;}
+        .menu li.on { background-color: brown;}
+    </style>
+</head>
+<body>
+    <div id="box1">BOX1</div>
+    <div id="box2">BOX2</div>
+    <div id="box3">BOX3</div>
+    <div id="box4">BOX4</div>
+    <div id="box5">BOX5</div>
+    <ul class="menu">
+        <li class="on"><a href="#box1"></a></li>
+        <li><a href="#box2"></a></li>
+        <li><a href="#box3"></a></li>
+        <li><a href="#box4"></a></li>
+        <li><a href="#box5"></a></li>
+    </ul>
+</body>
+</html>

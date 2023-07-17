@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐러셀연습3_하나씩이동</title>
+    <link rel="stylesheet" href="style_3.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".next").click(function(){
+                $(".wrap").stop().animate({"margin-left": "-50%"},function(){
+                    $(".wrap li").first().appendTo(".wrap");
+                    $(".wrap").css({"margin-left":"-25%"});
+                });
+            });
+
+            $(".prev").click(function(){
+                $(".prev").click(function(){
+                    $(".wrap").stop().animate({"margin-left":"0%"},function(){
+                        $(".wrap li").last().prependTo(".wrap");
+                        $(".wrap").css({"margin-left":"-25%"});
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="carousel clerFix">
+            <ul class="wrap clerFix">
+                <li class="bg1">01</li>
+                <li class="bg2">02</li>
+                <li class="bg3">03</li>
+                <li class="bg4">04</li>
+                <li class="bg5">05</li>
+                <li class="bg6">06</li>
+                <li class="bg7">07</li>
+                <li class="bg8">08</li>
+                <li class="bg9">09</li>
+                <li class="bg10">10</li>
+                <li class="bg11">11</li>
+                <li class="bg12">12</li>
+                <li class="bg13">13</li>
+                <li class="bg14">14</li>
+                <li class="bg15">15</li>
+                <li class="bg16">16</li>
+            </ul>
+            <button class="prev"></button>
+            <button class="next"></button>
+        </div>
+    </section>
+</body>
+</html>

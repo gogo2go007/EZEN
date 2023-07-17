@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃2번째</title>
+    <style type="text/css">
+        *{ margin: 0; padding: 0;}
+        a{ text-decoration: none; color: brown;}
+        a:hover{ color: aquamarine; text-decoration: underline;}
+        ol,ul,li{ list-style: none;}
+        img{ border: 0; vertical-align: top;}
+        
+        #header .header_box { width: 1000px; height: 100px; border: 1px solid grey; margin: 0 auto; text-align: center; line-height: 100px; font-size: 3em; font-weight: bold;}
+        #header .gnb{ width: 1000px; height: 70px; border: 1px solid grey; margin: 0 auto; margin-top: 10px; overflow: hidden;}
+        #header .gnb li{ width: 240px; font-size: 16px; text-align: center; line-height: 70px; float: left;}
+        
+        #section .contents{ width:1000px; height: 244px; margin: 0 auto; border: 1px solid grey; padding-top: 10px; padding-left: 10px; margin-top: 10px; overflow: hidden; box-sizing: border-box;}
+        #section .contents div{ width: 320px; height: 220px; line-height: 220px;  border: 1px dashed #de0707; float: left; text-align: center; font-size: 2.3em}
+        #section .contents .cont2{ margin-left: 7px; margin-right: 7px;}
+        #section .banner{ width: 1000px; height: 70px; border: 1px solid grey; margin: 0 auto; margin-top: 10px; font-size: 2em; line-height: 68px; text-align: center;}
+        
+        #footer{ width: 1000px; height: 100px; border: 1px solid grey; margin: 0 auto; text-align: center; line-height: 100px; font-size: 3em; font-weight: bold; margin-top: 10px;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="header_box">HEADER</div>
+        <ul class="gnb">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </div>
+    <div id="section">
+        <div class="contents">
+            <div class="cont1">본문내용1</div>
+            <div class="cont2">본문내용2</div>
+            <div class="cont3">본문내용3</div>
+        </div>
+        <div class="banner">배너광고</div>
+    </div>
+    <div id="footer">FOOTER</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+*{ margin: 0; padding: 0;}
+img{ border: 0; vertical-align: top;}
+ol,ul,li{ list-style: none;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1;}
+.clearFix::after{ display: block; content: ""; clear: both;}
+
+#header .logo{
+    float: left;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    margin-right: 80px;
+}
+/* 메뉴 높이값 설정 */
+#header .gnb{
+    width: 800px;
+    height: 50px;
+    transition: all 0.5s;
+    overflow: hidden;
+    background-color: pink;
+}
+/* class on 붙였을 때 높이값 설정 */
+#header .gnb.on{
+    height: 250px;
+}
+#header .gnb > li{
+    float: left;
+    width: 200px;
+    height: 50px;
+    background-color: antiquewhite;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+#header .gnb > li:hover{
+    background-color: darkorange;
+}
+.depth2 li{
+    transition: all 0.5s;
+}
+.depth2 li:hover{
+    background-color: darkgrey;
+}

@@ -1,0 +1,14 @@
+
+
+슬라이드
+carousel
+indicator(인디게이터) 버튼
+
+index() - 위치값
+width() - 가로크기
+height() - 세로크기(높이값)
+animate() -  가로크기 1000 * 위치값 1
+
+animate()사용
+animate는()괄호 안에 중괄호{} 안에 효과에 관련된 내용 넣기 , 500은 0.5s 
+$(".panel").stop().animate({"margin-left": -wid * i},500);

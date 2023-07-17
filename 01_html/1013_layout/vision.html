@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>현대건설_비전</title>
+    <style type="text/css">
+    *{
+        margin: 0; padding: 0;
+    }
+    ol,ul,li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    img{
+        border: 0; 
+        vertical-align: top;
+    }
+    body,html{
+    font-family: 'Malgun Gothic';
+    box-sizing: border-box;
+    }
+        
+    #section .idea_center{
+        width: 1100px;
+        margin: 0 auto;
+    }
+    #section .idea_center h1{
+        font-weight: 200;
+        letter-spacing: -3px;
+        margin-bottom: 50px;
+    }
+    #section .idea_center h2{
+        font-weight: 400;
+        font-size: 26px;
+        letter-spacing: -3px;
+    }
+    #section .idea_center .idea_top{
+        width: 100%;
+        height: 260px;
+        background-image: url(visi1.png);
+        margin-top: 30px;
+    } 
+    #section .idea_center .idea_top h3{
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        padding: 54px 0 20px;
+    }
+    #section .idea_center .idea_top p{
+        color: #fff;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        line-height: 19pt;
+    }
+    #section .idea_center .idea_bottom{
+        overflow: hidden;
+        margin:30px 0;
+    }
+    #section .idea_center .idea_bottom .idea_bottom_wrap{
+        float: left;
+        padding: 0 26px 0 35px;
+    }
+    #section .idea_center .idea_bottom .idea_bottom_wrap.border{
+        border-left: 1px solid #d0cbcb;
+        border-right: 1px solid #d0cbcb;
+    }
+    .idea_bottom .idea_bottom_wrap .idea_bottom_left{
+        float: left;
+    }
+    .idea_bottom .idea_bottom_wrap .idea_bottom_left h4{
+        font-weight: 400;
+        font-size: 23px;
+        color: #01A251;
+        letter-spacing: -1px;
+        font-family: "Kopub";
+        line-height: 23pt;
+        padding-bottom: 16px;
+    }
+    .idea_bottom .idea_bottom_wrap .idea_bottom_left p{
+        font-size: 14px;
+        letter-spacing: -1px;
+        line-height: 15pt;
+        font-weight: 500;
+        font-family: "Kopub";
+    }
+    .idea_bottom .idea_bottom_wrap .idea_bottom_right{
+        float: left;
+    }
+    .idea_bottom .idea_bottom_wrap .idea_bottom_right img{
+        width: 120px;
+    }
+    .video .video_center{
+        width: 1100px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .video .video_center iframe{
+        width: 100%;
+        height: 620px;
+    }
+    #section .spirit{
+        margin-bottom: 80px;
+    }
+    #section .spirit .spirit_center{
+        width: 1100px;
+        margin: 0 auto;
+    }
+    #section .spirit h1{
+        font-weight: 400;
+        font-size: 26px;
+        letter-spacing: -3px;
+    }
+    #section .spirit .spirit_box_wrap{
+        overflow: hidden;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box{
+        float: left;
+        margin-right: 5px;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box{
+        padding: 0 12px;
+        border-right: 1px solid #e3e3e3;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box.spirit_box_big{
+        width: 276px;
+        border: none;
+        padding-left: 0;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box h2{
+        font-weight: 400;
+        color: #01A251;
+        font-size: 23px;
+        letter-spacing: -1.5px;
+        line-height: 25pt;
+        margin: 10px 0;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box.spirit_box_big h2{
+        margin: 10px 0;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box.border{
+        border-right: none;
+    }
+    #section .spirit .spirit_box_wrap .spirit_box p{
+        color: #2a2a2a;
+        font-size: 15px;
+        line-height: 17pt;
+        margin: 0;
+        font-family: "Kopub";
+        font-weight: 500;
+    }
+    #section .spirit .spirit_bot{
+        margin-top: 80px;
+    }
+    #section .spirit .spirit_bot h3{
+        font-size: 17px;
+        color: #4e4e4e;
+        letter-spacing: -1px;
+    }
+    #section .spirit .spirit_bot p{
+        font-size: 16px;
+        line-height: 20pt;
+        margin-bottom: 50px;
+        color: #363636;
+        letter-spacing: -1px;
+    }
+    
+
+    #section .identity .identity_center{
+        width: 1100px;
+        margin: 0 auto;
+    }
+    #section .identity .txt_left{
+        width: 510px;
+        float: left;
+    }
+    #section .identity .txt_left .main_title{
+        font-weight: normal;
+        letter-spacing: -3px;
+        font-size: 33px;
+    }
+    #section .identity .txt_left .sub_title{
+        font-weight: normal;
+        letter-spacing: -3px;
+        font-size: 24px;
+        color: #01A251;
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+    #section .identity .txt_left p{
+        font-size: 16px;
+        line-height: 16pt;
+    }
+    #section .identity .ci_right{
+        width: 520px;
+        height: 420px;
+        float: left;
+        border: 1px solid #d0cbcb;
+        text-align: center;
+        margin-left: 60px;
+        margin-top: 27px;
+    }
+    #section .identity .ci_right .ci_eng{
+        margin-top: 120px;
+    }
+    #section .identity .ci_right .ci_kor{
+        margin-top: 60px;
+    } 
+    
+    #section .glow{
+        width: 100%;
+        height: 700px;
+        background-image: url(visi6.png);
+        overflow: hidden;
+    }
+    #section .glow .glow_center{
+        width: 1100px;
+        margin: 0 auto;
+    }
+    #section .glow .glow_txt{
+        color: #24b124;
+        float: left;
+        margin-top: 40px;
+    }
+    #section .glow .glow_txt .txt_color{
+        color: #fff;
+    }
+    #section .glow .glow_txt h1{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #section .glow .glow_txt h3{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #section .glow .glow_txt ul li{
+        text-indent: 10px;
+    }
+    #section .glow .glow_img{
+        float: left; 
+        margin-left: 60px;
+        margin-top: 165px;
+    }
+    </style>
+</head>
+<body>
+    <div id="section">
+        <div class="idea">
+            <div class="idea_center">
+                <h1>현대건설은 세계를 무대로 새로운 지평을 열고 있습니다. 앞선 기술력과<br>
+                 검증된 사업 추진 능력을 바탕으로 ‘글로벌 톱 티어’를 향해 나아갑니다</h1>
+                 <h2>기업 이념</h2>
+                 <div class="idea_top">
+                     <h3>현대건설:현대정신</h3>
+                     <p>용기 있는 자만이 시대를 앞서갈 수 있습니다.<br>
+                    현대건설은 미래를 내다보는 창조적 예지, 미래를 개척하는 적극의지, 미래를 현실화하는 강인한 추진력을 갖추고 새로운 길을 열어갑니다.<br>
+                    변화를 두려워하지 않는 ‘현대정신’은 미래를 선도해 나갈 현대건설의 가장 큰 경쟁력입니다.</p>
+                 </div>
+                 <div class="idea_bottom">
+                     <div class="idea_bottom_wrap">
+                        <div class="idea_bottom_left">
+                            <h4>Wisdom<br>창조적예지</h4>
+                            <p>미래지향적인 사고를 바탕으로<br>창조적 자세와 지혜를 추구합니다</p>
+                        </div>
+                        <div class="idea_bottom_right">
+                            <img src="visi2.svg" alt="아이콘1">
+                        </div>
+                     </div> 
+                     <div class="idea_bottom_wrap border">
+                        <div class="idea_bottom_left">
+                            <h4>Volition<br>적극의지</h4>
+                            <p>투철한 주인의식과 능동적인<br>태도로 미래를 개척합니다.</p>
+                        </div>
+                        <div class="idea_bottom_right">
+                            <img src="visi3.svg" alt="아이콘1">
+                        </div>
+                     </div> 
+                     <div class="idea_bottom_wrap">
+                        <div class="idea_bottom_left">
+                            <h4>Impellent<br>강인한 추진력</h4>
+                            <p>글로벌사업 수행을 위한 정신과<br>추진력을 배양하고 체질화합니다.
+                            </p>
+                        </div>
+                        <div class="idea_bottom_right">
+                            <img src="visi4.svg" alt="아이콘1">
+                        </div>
+                     </div>                     
+                 </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="video_center">
+                <iframe src="https://www.youtube.com/embed/89YJVY0Bcpo" title="[Korean] 2019 현대건설 기업홍보 영상 Out Of Frame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="spirit">
+           <div class="spirit_center">
+                <h1>기업정신</h1>
+                <div class="spirit_box_wrap">
+                    <div class="spirit_box spirit_box_big">
+                        <h2>We Build Tomorrow<br>
+                        함께 내일을 창조하는 기업</h2>
+                    </div>
+                    <div class="spirit_box">
+                        <h2>We : 함께하기</h2>
+                        <p>기업의 존재 이유는 사람들이 더 큰<br>
+                         행복을 추구하며 살 수 있도록 하는<br>
+                         것입니다. 이것은 현대건설이<br>
+                         추구하는 목표이자 비전입니다.<br>
+                         현대건설은 고객과 하나된 마음으로<br>
+                         고객의 꿈과 소망에 언제나 함께<br>
+                         합니다.</p>
+                    </div>
+                    <div class="spirit_box">
+                        <h2>Build : 창조하기</h2>
+                        <p>건설이란 창조하는 것, 새로운<br>
+                         사회를 창조하고 새로운 문화를<br>
+                         창조하고 이를 통해 새로운<br>
+                         역사를 창조하는 것입니다.<br>
+                         사람들이 더 행복하게 살 수<br>
+                         있도록, 우리는 더 좋은 삶의<br>
+                         바탕을 창조합니다.
+                        </p>
+                    </div>
+                    <div class="spirit_box border">
+                        <h2>Tomorrow : 변화하기</h2>
+                        <p>내일은 어디에서 시작할까요? 미래가<br>
+                         온다는 것을 어떻게 알 수 있을까요?<br>
+                         현대건설은 변화로 부터 내일이<br>
+                         시작된다고 생각합니다. 나아가<br>
+                         현대건설이 창조하는 새로움을 통해<br>
+                         우리의 내일, 그리고 미래가<br>
+                         달라진다고 굳게 믿습니다.
+                        </p>
+                    </div>                
+                </div>
+                <div class="spirit_bot">
+                    <h3>글로벌 종합엔지니어링 기업으로서</h3>
+                    <p>기존 시공 위주의 사업을 넘어 기획, 엔지니어링, 운영 등 전 부문의 역량이 결합된 종합 건설서비스를 제공해 나갈 것입니다. 적극적인 시장 개척을 통해<br>
+                     해외 수주의 다변화를 추구하고, 최적화된 경영 인프라 구축으로 세계 건설산업을 선도하는 글로벌 종합엔지니어링 기업으로 거듭나겠습니다.</p>
+                    <h3>유관 산업과의 유기적 협력을 토대로</h3>
+                    <p>설계 및 시공의 전통적 건설영역은 물론, 자원개발, 부동산 개발, 교통 인프라 및 시설물 운영 등 사업 영역 확대를 위해 유관 산업과의 유기적 협력 관계를<br>
+                     강화해 나갈 것입니다. 또한 전기자동차 인프라, 신재생 에너지 플랜트, 환경 사업 등 녹색 성장의 기틀 마련에도 힘쓰겠습니다.</p>
+                     <h3>미래 기술과 산업의 융ᆞ복합화를 주도하여</h3>
+                     <p>정보기술(IT, Information Technology) · 생명공학기술(BT, Bio Technology) · 나노기술(NT, Nano Technology) 등 산업의 각 영역에서 발현되는 단위<br>
+                     기술들이 유기적으로 통합되고 배치될 수 있는 장을 구현하겠습니다. 또한 이를 효과적으로 운용하는 산업의 통합 조정자로서 자원개발 및 에너지사업 등<br>
+                      신성장 사업분야의 촉매제 역할을 수행해 나가겠습니다.</p>
+                      <h3>더 좋은 삶의 기반을 창조한다.</h3>
+                      <p>’인간’에 최우선의 가치를 두고 고객과 하나된 마음으로 더 나은 삶의 터전을 만들어, 모든 이해관계자와 함께 성장하고 사회에 공헌하는, 더 발전된 내일의<br>
+                       모습을 창조하는 기업이 되겠습니다.</p>
+                </div>   
+           </div>
+        </div>
+        <div class="identity">
+           <div class="identity_center">
+                <div class="txt_left">
+                    <h1 class="main_title">기업 아이덴티티(CI)</h1>
+                    <h2 class="sub_title">건설의 역사를 담다</h2>
+                    <p>1947년 출범한 현대건설은 대한민국 경제 성장의 주역으로 한국 건설 산업의 글로벌화를 주도해온 국가대표 건설회사입니다. 건설업의 과거와 현재, 미래를 창조해 나가는 현대건설은 인류 건설의 시초라고 할 수 있는 고대 이집트 피라미드를 형상화한 두 개의 삼각형에 오랜 시간 이어져 온 건설의 역사와 현대건설의 정신을 담았습니다. 안정적인 형태의 삼각형은 건설에서 가장 중요한 ‘안전’을 상징하기도 합니다. 또한 노란색과 녹색은 새싹이 자라 녹음이 되듯 건설을 통한 인류의 지속적인 발전
+                </div>
+                <div class="ci_right">
+                    <h3 class="ci_eng"><img src="e-logo.png" alt="영문ci"></h3>
+                    <h3 class="ci_kor"><img src="k-logo.png" alt="한글ci"></h3>
+                </div>               
+           </div>
+
+        </div>
+        <div class="glow">
+           <div class="glow_center">
+                <div class="glow_txt">
+                <h1 class="txt_color">경영 방침</h1>
+                <h2 class="txt_color">안전하고 행복한 글로벌 건설 리더</h2>
+                <h3>지속가능 성장</h3>
+                <ul class="list1">
+                    <li class="txt_color">· 안전 최우선</li>
+                    <li class="txt_color">· 최고의 품질은 나부터 시작</li>
+                    <li class="txt_color">· 고객 감동 경영</li>
+                </ul>
+                <h3>2030 전략 실행</h3>
+                <ul class="list2">
+                    <li class="txt_color">· 신사업 추진 및 신시장 진출</li>
+                    <li class="txt_color">· 에너지 전환 선도 (SMR, 수소)</li>
+                    <li class="txt_color">· 기술기반 경쟁력 확보</li>
+                </ul>
+                <h3>함께 성장하는 회사</h3>
+                <ul class="list3">
+                    <li class="txt_color">· 적극적 의지와 도전적 실행</li>
+                    <li class="txt_color">· 권한 위임과 빠른 의사결정</li>
+                    <li class="txt_color">· 함께 만들어가는 행복한 미래</li>
+                </ul>                    
+                </div>
+                <div class="glow_img">
+                    <img src="visi5.png" alt="grow_img">
+                </div>   
+           </div>
+            
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

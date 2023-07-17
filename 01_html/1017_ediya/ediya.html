@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이디야연습</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        a{ text-decoration: none; color: #000;}
+        ol,ul,li{ list-style: none;}
+        img{ border: 0; vertical-align: top;}
+        html,body{font-family: 'Noto Sans KR', 
+        '나눔고딕', NanumGothic, '맑은 고딕', MalgunGothic, '돋움', Dotum, sans-serif;
+        box-sizing: border-box;}
+        
+        #header{ width: 1180px; margin: 0 auto; }
+        #header .logo{ text-align: center; margin: 30px 0;}
+        #header .gnb_wrap{overflow: hidden; width:100%;  }
+        #header .gnb_wrap li{ float: left; margin: 0 55px;}
+        #header .gnb_wrap li a{ font-size: 17px; color: #202023;}
+        #header .gnb_wrap li a::after{ display: block; content: ""; width: 100%; height:4px; background-color:transparent; margin-top: 10px;}
+        #header .gnb_wrap li a:hover::after{ display: block; content: ""; width: 100%; height:4px; background-color: #000; margin-top: 10px;}
+
+        #section{width: 100%;}
+        #section .main_banner{ height: 420px; background-image:url(campaign_visual.jpg);}
+        #section .main_banner .m_text{ font-size: 2.9em; color: #fff; font-weight: 300; text-align: center; padding-top: 70px;}
+        #section .main_banner .s_text{ color: #c9c8c8; text-align: center; margin-top: 15px; font-weight: 300; line-height: 16pt;}
+        #section .main_banner .tab_menu{ overflow: hidden; width: 910px; margin: 0 auto; margin-top: 30px;}
+        #section .main_banner .tab_menu li{ width: 180px; height: 40px; border: 1px solid #e5e5e5; float: left; text-align: center; line-height: 40px; border-right: 0;}
+        #section .main_banner .tab_menu li:first-child{background-color: #fff;}
+        #section .main_banner .tab_menu li:first-child a{color: #000;}
+        #section .main_banner .tab_menu li:last-child{border-right: 1px solid #e5e5e5;}
+        #section .main_banner .tab_menu li a{ color: #fff; color: #e5e5e5; font-size: 10pt;}
+        
+        #section .mate{ width: 1180px; margin: 0 auto; margin-top: 30px; }
+        #section .mate h2{ font-weight: 400; letter-spacing: -1px; font-size: 26px; margin-bottom: 25px;}
+        #section .mate h2 img{ margin-top:8px;margin-right: 5px;}
+        #section .mate h3{ font-size: 20px; font-weight: 300; margin-top: 22px; color: #202023; margin-bottom: 30px;}
+        #section .mate .contents{ overflow: hidden; }
+        #section .mate .contents li{ width:568px; float: left; border: solid 1px #d9d9d9; margin-right: 20px; margin-bottom: 20px;}
+        #section .mate .contents li img{ width:100%;}
+        #section .mate .contents li h4{ margin: 30px 0 20px 30px; color: #002f6c; font-size: 16px;}
+        #section .mate .contents li p{  margin-left: 30px; font-size: 13px; color: #202023; height: 42px;}
+        #section .mate .contents li .btn_view{background: #fff; float: right; margin: 0 20px 20px 0; width: 83px; height: 28px;
+            border-radius: 15px; border: solid 1px #d9d9d9;}
+        #section .mate .contents li .btn_view a{ display: block; font-size: 13px; color: #d9d9d9; text-align: center; line-height: 28px;}
+        #section .mate .contents li .btn_view a:hover{background-color: #002f6c; border: 1px solid #002f6c; color: #fff; border-radius: 15px;}
+        
+        #footer{ background-color: #262626; padding: 40px 0; margin-top: 70px;}
+        #footer .footer_center{ width: 1180px; margin: 0 auto; text-align: center; color: #6c6c6c; font-size: 12px;}
+        #footer .footer_center .footer_logo{ margin-bottom: 15px; }
+        #footer .footer_center p{ font-size: 13px; margin-bottom: 13px; line-height: 16pt; }
+        #footer .footer_center span{ display: inline-block; width: 1px; height: 11px; background-image: url(footer_line.gif); margin: 0 5px;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="logo"><a href="#"><img src="top_logo.gif" alt="logo"></a></h1>
+        <div class="gnb">
+            <ul class="gnb_wrap">
+                <li><a href="#">원두</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">유통제품</a></li>
+                <li><a href="#">이디야멤버스</a></li>
+                <li><a href="#">상품권</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="section">
+        <div class="main_banner">
+            <h1 class="m_text">이디야커피와 함께 하는 향기로운 동행</h1><br>
+            <p class="s_text">오랜 시간 아껴주신 여러분의 성원에 보답하기 위해<br>이디야커피가 대한민국과 이디야 가족 모두를 응원합니다.</p><br>
+            <ul class="tab_menu">
+                <li><a href="">메이트 희망기금</a></li>
+                <li><a href="">캠퍼스 희망기금</a></li>
+                <li><a href="">식수위행 캠페인</a></li>
+                <li><a href="">이디야의 동행</a></li>
+                <li><a href="">기타 활동</a></li>
+            </ul>
+        </div>
+        <div class="mate">
+            <h2><img src="contents_bull.gif" alt="">이디야 메이트 희망기금 사업</h2>
+            <h3>이디야커피는 대한민국 청년의 미래를 후원합니다.</h3>
+            <ul class="contents">
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="img1.jpg" alt="사진">
+                            <h4>2022 상반기 이디야 메이트 희망기금 전달</h4>
+                            <p>10년간 총 4,134명에게 희망기금 전달하며 끊임없이 이디야 메이트 희망기금 사업<br>
+                             이어나가코로나 등의 상황에서도 이디야커피의 ...</p>
+                            <div class="btn_view"><a href="#">더보기</a></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="img2.jpg" alt="사진">
+                            <h4>2021 하반기 이디야 메이트 희망기금 전달</h4>
+                            <p>‘이디야 메이트 희망기금’ 매장에서 근무하는 이디야 메이트 총 3천 943명에게 9년간 약<br>
+                                 20억 원 전달추석 앞두고 이...</p>
+                            <div class="btn_view"><a href="#">더보기</a></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="img3.jpg" alt="사진">
+                            <h4>2021 상반기 이디야 메이트 희망기금 전달</h4>
+                            <p>매장에서 근무하는 이디야 메이트 총 3천734명에게 ‘이디야 메이트 희망기금’약 18억<br>
+                                 6천만 원 전달 이디야커...</p>
+                            <div class="btn_view"><a href="#">더보기</a></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img src="img4.png" alt="사진">
+                            <h4>2020 하반기 이디야 메이트 희망기금 전달</h4>
+                            <p> ▶ ‘이디야 메이트 희망기금’ 8년간 총 3,534명에게 약 18억원 전달▶ 코로나19 시국<br>
+                                겪는 이디....</p>
+                            <div class="btn_view"><a href="#">더보기</a></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>   
+       </div>
+    </div>
+    <div id="footer">
+       <div class="footer_center">
+            <h1 class="footer_logo"><img src="bottom_logo.gif" alt="하단로고"></h1>
+            <p>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17) &nbsp; <span></span> TEL : 02-543-6467&nbsp; <span></span>  FAX : 02-543-7191<br>
+                사업자등록번호 : 107-86-16302&nbsp; <span></span> 통신판매업 신고 : 강남 제 002519호&nbsp; <span></span> 대표이사 : 문창기</p>
+            <p>ⓒ 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</p>   
+       </div>
+    </div>
+</body>
+</html>

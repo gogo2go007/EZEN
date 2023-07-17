@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cu_menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".gnb > li").hover(function(){
+                $(this).children(".depth2").stop().slideToggle(300);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <ul class="top_m clearFix">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">점장인증</a></li>
+            <li><a href="#">점주광장</a></li>
+        </ul>
+        <div class="hd_m clearFix">
+            <h1 class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></h1>
+            <ul class="gnb clearFix">
+                <li>
+                    <a href="#">CU소개</a>
+                    <ul class="depth2">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">디지털 사보</a></li>
+                        <li><a href="#">CU 갤러리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">상품·서비스</a>
+                    <ul class="depth2">
+                        <li><a href="#">전체 상품</a></li>
+                        <li><a href="#">CU 차별화 상품</a></li>
+                        <li><a href="#">행사상품</a></li>
+                        <li><a href="#">생활편의 서비스</a></li>
+                        <li><a href="#">제휴카드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">매장안내</a>
+                </li>
+                <li>
+                    <a href="#">멤버십</a>
+                    <ul class="depth2">
+                        <li><a href="#">멤버십 소개</a></li>
+                        <li><a href="#">포켓 CU</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">창업·상생</a>
+                    <ul class="depth2">
+                        <li><a href="#">사업의 이해</a></li>
+                        <li><a href="#">가맹조건</a></li>
+                        <li><a href="#">창업 설명회</a></li>
+                        <li><a href="#">창업 성공기</a></li>
+                        <li><a href="#">점포물건</a></li>
+                        <li><a href="#">상생혜택</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">입점상담</a>
+                    <ul class="depth2">
+                        <li><a href="#">입점 프로세스</a></li>
+                        <li><a href="#">기준 안내</a></li>
+                        <li><a href="#">입점 상담 신청</a></li>
+                        <li><a href="#">동반 성장</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">새로운소식</a>
+                    <ul class="depth2">
+                        <li><a href="#">CU소식</a></li>
+                        <li><a href="#">이거어때</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="global_m">
+                <li><a href="#">KR</a></li>
+                <li><a href="#">EN</a></li>
+                <li><a href="#">CN</a></li>
+            </ul>
+            <div class="ham_m"><a href="#"><img src="img/btn_menu_ico.png" alt="menu"></a></div>
+        </div>
+    </div>
+    <div id="section">
+        <div class="hello wrap">
+            <div class="hello_left">
+                <img src="img/main_visual_logo_text_pc.png" alt="img">
+                <p>CU 스토리 보기<span class="icon_circle"></span></p>
+            </div>
+            <div class="hello_right">
+                <img src="img/main_visual_illu.png" alt="img">
+            </div>
+        </div>
+        <div class="visual">
+            <ul class="visual_img clearFix">
+                <li><a href="#"><img src="img/03B236C1355C49E0AC2741B639FA9F7B.png" alt="img"></a></li>
+                <li><a href="#"><img src="img/3D8ECAE710544771969481C1E0D053CF.png" alt="img"></a></li>
+                <li><a href="#"><img src="img/5CF5F676C7354573A70EA4CF7AE3974C.png" alt="img"></a></li>
+            </ul>
+            <ul class="visual_btn clearFix">
+                <li class="on"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+            <div class="visual_allw clearFix">
+                <div class="visual_left"></div>
+                <div class="visual_right"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

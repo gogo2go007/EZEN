@@ -1,0 +1,276 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {margin: 0; padding: 0;}
+img { border: 0; vertical-align: top;}
+ol,ul,li { list-style: none;}
+a { text-decoration: none; color: #000;}
+body { line-height: 1; font-family: 'Noto Sans KR', sans-serif;}
+.clerFix::after { display: block; content: ""; clear: both;}
+.center { width: 1240px; margin: 0 auto;}
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+#header {
+    width: 100%;
+}
+#header .h_top {
+    text-align: center;
+    background-color: #f7f4f2;
+    height: 106px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+#header .h_m {
+    position: relative;
+}
+#header .h_m  .gnb_bg {
+    width: 100%;
+    height: 53px;
+    background-color: rgba(0, 0, 0, 0.486);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#header .h_m .gnb {
+    width: 800px;
+    height: 53px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+#header .h_m .gnb > li{
+    float: left;
+    width: 160px;
+    text-align: center;
+    line-height: 53px;
+    position: relative;
+    transition: all 0.5s;
+}
+#header .h_m .gnb > li > a{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Nanum Gothic', sans-serif; 
+}
+#header .h_m .gnb > li:hover{
+    background-color: #666;
+}
+/* #header .h_m .gnb > li:hover .depth2{
+    display: block;
+} */
+#header .h_m .gnb .depth2 {
+    line-height: 30px;
+    text-align: left;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 100%;
+    background-color: #f7f4f2;
+    text-indent: 10px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    padding: 15px 0;
+    display: none;
+}
+#header .h_m .gnb .depth2 li a{
+    font-size: 14px;
+    color: #666;
+    transition: all 0.5s;
+}
+#header .h_m .gnb .depth2 li:hover a{
+    color: #000;
+}
+#header .h_m .visual{
+    width: 100%;
+    height: 503px;
+    overflow: hidden;
+    position: relative;
+}
+#header .visual .panel {
+    width: 700%;
+    height: 100%;
+}
+#header .visual .panel li{
+    float: left;
+    width: 14.285%;
+}
+#header .visual .panel li img{
+    height: 100%;
+}
+#header .visual .pager {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header .visual .pager li{
+    float: left;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(180, 180, 180);
+    margin: 0 5px;
+}
+#header .visual .pager li a{
+    display: block;
+}
+#header .visual .pager li.on,
+#header .visual .pager li:hover {
+    background-color: #666;
+}
+
+#section .vd_wrap{
+    width: 100%;
+    height: 1024px;
+    background-image: url(img/main_bg_aboutus.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#section .vd_contents {
+    padding: 120px 0;
+    text-align: center;
+}
+#section .vd_contents h3{
+    font-size: 24px;
+    padding: 80px 0;
+    font-weight: 100;
+    font-family: 'NanumSquareNeo-Variable';
+    position: relative;
+}
+#section .vd_contents h3::before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 37px;
+    left: 577px;
+}
+#section .vd_box {
+    width: 1090px;
+    height: 513px;
+    background-color: #ad002b;
+    display: flex;
+    position: relative;
+}
+#section .vd_box .vd_txt {
+    padding: 110px 62px;
+    color: #fff;
+    text-align: left;
+}
+#section .vd_box .vd_txt h4 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    line-height: 32px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#section .vd_box .vd_txt p {
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 25px;
+}
+#section .vd_box .vd_video {
+    width: 910px;
+    position: absolute;
+    top: 50px;
+    left: 330px;
+}
+
+#section .recipe {
+    width: 100%;
+    height: 976px;
+    background-image: url(img/main_bg_recipe.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+#section .recipe .recipe_txt {
+    padding: 120px 0;
+    text-align: center;
+}
+#section .recipe .recipe_txt h3{
+    font-size: 24px;
+    padding: 80px 0;
+    font-weight: 100;
+    font-family: 'NanumSquareNeo-Variable';
+    position: relative;
+}
+#section .recipe_txt h3::before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 37px;
+    left: 586px;
+}
+#section .recipe .recipe_caroucel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#section .recipe .recipe_panel {
+    width: 300%;
+    /* 오른쪽 버튼 눌렀을때 오류 막기 위한 작업 */
+    /* 두번째 li 요소부터 보이게 한다. 그래야 오른쪽 버튼 눌렀을 때
+       이동할 공간이 생긴다. */
+    margin-left: -33.333%;
+}
+#section .recipe .recipe_panel li {
+    float: left;
+    /* li 크기가 이미지 크기 보다 커서 그 사이에 자동으로 margin생김 */
+    width: 11.111%;
+}
+#section .recipe .recipe_panel li:hover {
+    background-color: #000;
+}
+#section .recipe button {
+    position: absolute;
+    top: 56%;
+}
+#section .recipe .recipe_left {
+    left: 250px;
+}
+#section .recipe .recipe_right {
+    right: 250px;
+}
+#footer {
+    width: 100%;
+    height: 80px;
+    background-color:#232323;
+    position: relative; z-index: 1000;
+}
+#footer .footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+}
+#footer .footer_wrap p {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    color: #8e8d8d;
+    line-height: 80px;
+}
+#footer .footer_wrap a {
+    display: block;
+    margin-top: 12px;
+}
+/* 탑버튼 고정 */
+#footer .top_btn {
+    position: fixed;
+    right: 50px;
+    top:80%;
+    z-index: 100000;
+    display: none;
+}

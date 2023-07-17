@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세종문화회관_메뉴 제이쿼리</title>
+    <link rel="stylesheet" href="1115_sejong.css">
+    <!-- 자바스크립트 파일 연결 -->
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        // 자바스크립트 시작구문
+        $(document).ready(function(){
+            // .gnb > li 에 마우스를 올리면 .depth2가 내려온다.
+            // ()안에 숫자 넣으면 속도 조절 가능 1000이 1초
+            $(".gnb > li").mouseenter(function(){
+                $(this).children(".depth2").stop().slideDown(200);
+            });
+            // .gnb > li 에 마우스가 떠나면 .depth2가 올라간다.
+            $(".gnb > li").mouseleave(function(){
+                $(this).children(".depth2").stop().slideUp(200);
+            });
+        });          
+        
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="hd_bg"></div>
+        <div class="hd_m center">
+            <ul class="gnb g_left clearFix">
+                <li>
+                    <a href="#">공연·전시·강좌</a>
+                    <ul class="depth2">
+                        <li><a href="#">세종시즌</a></li>
+                        <li><a href="#">공연일정</a></li>
+                        <li><a href="#">패키지</a></li>
+                        <li><a href="#">전시일정</a></li>
+                        <li><a href="#">강좌일정</a></li>
+                        <li><a href="#">좌석배치도</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">대관안내</a>
+                    <ul class="depth2">
+                        <li><a href="#">대관공고</a></li>
+                        <li><a href="#">대관신청</a></li>
+                        <li><a href="#">세종문화회관 대관</a></li>
+                        <li><a href="#">꿈의숲아트센터 대관</a></li>
+                        <li><a href="#">기타대관</a></li>
+                        <li><a href="#">홈페이지 배너신청</a></li>
+                        <li><a href="#">티켓판매절차</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">참여공간</a>
+                    <ul class="depth2">
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">세종투어</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">뉴스·소식</a>
+                    <ul class="depth2">
+                        <li><a href="#">새소식</a></li>
+                        <li><a href="#">뉴스센터</a></li>
+                        <li><a href="#">세종문화N</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                    <ul class="depth2">
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">고객문의</a></li>
+                        <li><a href="#">회원혜택 안내</a></li>
+                        <li><a href="#">예매안내</a></li>
+                        <li><a href="#">관람예절</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <h1 class="logo"><a href="#"><img src="img/logo_new.png" alt="logo"></a></h1>
+            <ul class="gnb g_right">
+                <li>
+                    <a href="#">서울시예술단</a>
+                    <ul class="depth2">
+                        <li><a href="#">서울시국악관현악단</a></li>
+                        <li><a href="#">서울시무용단</a></li>
+                        <li><a href="#">서울시합창단</a></li>
+                        <li><a href="#">서울시뮤지컬단</a></li>
+                        <li><a href="#">서울시극단</a></li>
+                        <li><a href="#">서울시유스오케스트라단</a></li>
+                        <li><a href="#">서울시소년소녀합창단</a></li>
+                        <li><a href="#">서울시청소년국악단</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기관소개</a>
+                    <ul class="depth2">
+                        <li><a href="#">세종문화회관 소개</a></li>
+                        <li><a href="#">시설소개</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                        <li><a href="#">후원‧협찬</a></li>
+                        <li><a href="#">CLEAN 세종</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="visual">
+            <ul class="vs_btn">
+                <li><a href="#">예매하기</a></li>
+                <li><a href="#">상세보기</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="section"></div>
+</body>
+</html>

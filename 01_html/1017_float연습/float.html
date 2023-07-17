@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float파헤치기</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none; color: #000}
+        img{border: 0; vertical-align: top;}
+        ol,ul,li{list-style: none;}
+        
+        .clearFix{ overflow: hidden;}
+        .box1{ width: 150px; height: 100px; border: 2px solid red; margin: 10px; float: left;}
+        .box2{ width: 150px; height: 100px; border: 2px solid red; margin: 10px; float: left;}
+        .box3{ width: 150px; height: 100px; border: 2px solid red; margin: 10px; float: left;}
+        
+        .group2 .cont2{ width: 150px; height: 100px; border: 2px solid blue; margin: 10px; float: right; }
+        
+        .wrap{ width: 1100px; height: 60px; line-height: 60px; background-color: beige; margin: 0 auto;}
+        .wrap .logo{ float: left;}
+        .wrap .gnb{ float: right;}
+        .wrap .gnb li{ float: left; margin-right: 50px;}
+        .wrap .gnb li a:hover{ color: red; text-decoration: line-through;}
+    </style>
+</head>
+<body>
+    <div class="clearFix">
+        <div class="box1">컨텐츠01</div>
+        <div class="box2">컨텐츠02</div>
+        <div class="box3">컨텐츠03</div>    
+    </div>   
+    <div class="group2 clearFix">
+        <div class="cont2 box4">컨텐츠04</div>
+        <div class="cont2 box5">컨텐츠05</div>
+        <div class="cont2 box6">컨텐츠06</div>    
+    </div>
+    
+    <div class="wrap clearFix">
+        <h1 class="logo">로고</h1>
+        <ul class="gnb">
+            <li><a href="#">menu01</a></li>
+            <li><a href="#">menu02</a></li>
+            <li><a href="#">menu03</a></li>
+            <li><a href="#">menu04</a></li>
+            <li><a href="#">menu05</a></li>
+        </ul>
+    </div>
+</body>
+</html>

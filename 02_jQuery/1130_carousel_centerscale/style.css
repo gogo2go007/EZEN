@@ -1,0 +1,74 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0;}
+img { border: 0; vertical-align: top;}
+ol,ul,li { list-style: none;}
+a { text-decoration: none; color: #000;}
+body { line-height: 1;}
+.clearFix::after { display: block; content: ""; clear: both;}
+
+.carousel {
+    width: 1440px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: grey;
+    position: relative;
+    overflow: hidden;
+}
+.carousel .panel{
+    width: 5000px;
+    margin-left: -550px;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+.carousel .panel li{
+    width: 800px;
+    height: 500px;
+    margin: 0 10px;
+    float: left;
+    text-align: center;
+    line-height: 500px;
+    font-size: 3em;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+.carousel .panel li:nth-child(2){
+    /* 커졌을때 margin포함 880px */
+    transform: scale(1.1);
+    margin: 0 50px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.carousel .panel .panel1{
+    background-color: aquamarine;
+}
+.carousel .panel .panel2{
+    background-color: bisque;
+}
+.carousel .panel .panel3{
+    background-color: brown;
+}
+.carousel .panel .panel4{
+    background-color: blueviolet;
+}
+.carousel .panel .panel5{
+    background-color: darkgoldenrod;
+}
+.carousel .panel .panel6{
+    background-color: chartreuse;
+}
+
+.carousel button {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    border: 0;
+}
+.carousel button.left_btn {
+    left: 0;
+}
+.carousel button.right_btn {
+    right: 0;
+}

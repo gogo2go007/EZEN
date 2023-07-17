@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴_조성아뷰티</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 탭메뉴 li 클릭하면
+            $(".tab_menu > li").click(function(){
+                // 변수지정
+            var i = 0;
+            // 탭메뉴 on효과 초기화
+            $(".tab_menu > li").removeClass("on");
+            // 위치값구하기
+            i = $(this).index();
+            // 위치에 해당하는 값에 클래스on달아주기
+            $(".tab_menu > li").eq(i).addClass("on");
+                // 모든 컨텐츠 숨기기
+            $(".tab_contents > li").stop().fadeOut();
+            // 클릭한 위치에 해당하는 컨텐츠만 보여주기
+            $(".tab_contents > li").eq(i).stop().fadeIn();
+            
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="section">
+        <h2>Promotion</h2>
+        <ul class="tab_menu">
+            <li class="on"><a href="#">이달의 '아이템'</a></li>
+            <li><a href="#">조성아 ORIGINAL</a></li>
+        </ul>
+        <ul class="tab_contents">
+            <li class="bg1">
+                <div class="tab_wrap">
+                    <h3>💗이달의 아이템💗</h3>
+                    <p>각 브랜드별 이달의 아이템을 만나보세요</p>
+                    <div class="tab_box">
+                        <ul class="clearFix">
+                            <li>
+                                <div class="t_b_img">
+                                    <img src="img/1000001129_main_072.gif" alt="img">
+                                </div>
+                                <div class="t_b_txt">
+                                    <h4>CHOSUNGAH TM</h4>
+                                    <h3>[신상 5천포인트적립]에이치 세럼 스틱 허니 프로틴 대왕에디션</h3>
+                                    <p>￦32,000   <span>45%</span></p>
+                                    <p class="ori">￦58,000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="t_b_img">
+                                    <img src="img/1000000912_main_036.jpg" alt="img">
+                                </div>
+                                <div class="t_b_txt">
+                                    <h4>CHOSUNGAH TM</h4>
+                                    <h3>레이빔 업 크림 엔젤링 에디션</h3>
+                                    <p>￦17,900   <span>57%</span></p>
+                                    <p class="ori">￦42,000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="t_b_img">
+                                    <img src="img/1000001097_main_0100.jpg" alt="img">
+                                </div>
+                                <div class="t_b_txt">
+                                    <h4>CHOSUNGAH TM</h4>
+                                    <h3>[특별기획] 헤어 커버 섀도우 + 동공미인마스카라</h3>
+                                    <p>￦21,900   <span>27%</span></p>
+                                    <p class="ori">￦30,000 </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="arrow">
+                            <div class="l_arrow"><a href="#"><img src="img/swiper-prev-btn2.png" alt="arrow"></a></div>
+                            <div class="r_arrow"><a href="#"><img src="img/swiper-next-btn2.png" alt="arrow"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="bg2">
+                <div class="tab_wrap">
+                    <h3>ONE&ONLY 조성아 ORIGINAL</h3>
+                    <p>31년 뷰티 노하우로 만들어진 조성아 오리지널 프로덕트</p>
+                    <div class="tab_box">
+                        <ul>
+                            <li>
+                                <div class="t_b_img">
+                                    <img src="img/1000000741_main_063.gif" alt="img">
+                                </div>
+                                <div class="t_b_txt">
+                                    <h4>16BRAND</h4>
+                                    <h3>16 마이 매거진 하루견과 넛츠 무드 (2colors)</h3>
+                                    <p>￦11,900 <span>30%</span></p>
+                                    <p class="ori">￦16,900 </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="t_b_img">
+                                    <img src="img/1000000554_main_017.gif" alt="img">
+                                </div>
+                                <div class="t_b_txt">
+                                    <h4>CHOSUNGAH TM</h4>
+                                    <h3>16 마이 매거진 데일리 무드 (2colors)</h3>
+                                    <p>￦11,900  <span>30%</span></p>
+                                    <p class="ori">￦16,900 </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="t_b_img">
+                                    <img src="img/1000000629_main_040.gif" alt="img">
+                                </div>
+                                <div class="t_b_txt">
+                                    <h4>CHOSUNGAH TM</h4>
+                                    <h3>16 마이 매거진 써니 무드 (2colors)</h3>
+                                    <p>￦11,900<span>30%</span></p>
+                                    <p class="ori">￦16,900</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="arrow">
+                            <div class="l_arrow"><a href="#"><img src="img/swiper-prev-btn2.png" alt="arrow"></a></div>
+                            <div class="r_arrow"><a href="#"><img src="img/swiper-next-btn2.png" alt="arrow"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

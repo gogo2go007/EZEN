@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션이해하기</title>
+    <style>
+        .box{
+            width: 300px; height: 200px;
+            border: 2px solid #000;
+        }
+        .box1{ background-color: pink;}
+        .box2{ 
+            background-color: aquamarine;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+        .box_group{
+            margin-top: 100px;
+            width: 700px;
+            height: 600px;
+            background-color: mediumvioletred;
+            position: relative;
+        }
+        .box3{ 
+            background-color: bisque;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 4;
+        }
+        .box4{ 
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 250px;
+            right: 70px;
+            z-index: 10;
+        }
+        .box5{
+            background-color: darkgoldenrod;
+            position: absolute;
+            top: 350px;
+            right: 200px;
+            z-index: 7;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box_group">
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+</body>
+</html>

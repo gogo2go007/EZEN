@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <!-- <script src="carousel.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            // 변수선언
+            // var i = $(".btn li.current").index();
+            // 현재 current 붙어 있는 값 결국 변수값은 0
+            var i = 0;
+            // 가로값을 구하기 위한 변수 선언
+            //carousel의 width은 1000이니까 변수값은 1000
+            var wid = $(".carousel").width();
+        
+            $(".btn li").click(function(){
+                // 위치값구하기
+                i = $(this).index();
+                // 버튼 초기화
+                $(".btn li").removeClass("current");
+                // 위치값에 담긴 값에 활성화시키기
+                $(".btn li").eq(i).addClass("current");
+                // $(this).addClass("current"); 같은의미
+        
+                // panel이 margin-left로 이동하도록 -값을 넣어줌 
+                $(".panel").stop().animate({"margin-left": -wid * i},500);
+        
+            });    
+        });
+    </script>
+
+</head>
+<body>
+    <section>
+        <div class="carousel">
+            <ul class="panel clearFix">
+                <li>컨텐츠영역01</li>
+                <li>컨텐츠영역02</li>
+                <li>컨텐츠영역03</li>
+                <li>컨텐츠영역04</li>
+            </ul>
+            <ul class="btn clearFix">
+                <li class="current"><a href="#">버튼1</a></li>
+                <li><a href="#">버튼2</a></li>
+                <li><a href="#">버튼3</a></li>
+                <li><a href="#">버튼4</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

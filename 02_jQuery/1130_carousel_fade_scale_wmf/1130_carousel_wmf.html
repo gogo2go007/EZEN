@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMF</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 메뉴 영역
+            $(".gnb > li").hover(function(){
+                $(this).children(".depth2").stop().slideToggle();  
+            });
+
+            // visual 슬라이드 영역
+            var i = 0;
+            $(".pager li").click(function(){
+                i = $(this).index();
+                $(".panel li").stop().fadeOut();
+                $(".panel li").eq(i).stop().fadeIn();
+
+                $(".pager li").removeClass("on");
+                $(".pager li").eq(i).addClass("on");
+            });
+
+            // cont 슬라이드 영역
+            $(".cont_pager li").click(function(){
+                i = $(this).index();
+                $(".cont_panel li").stop().fadeOut();
+                $(".cont_panel li").eq(i).stop().fadeIn();
+
+                $(".cont_pager li").removeClass("on");
+                $(".cont_pager li").eq(i).addClass("on");
+
+                $(".cont_panel li").remove("on");
+                $(".cont_panel li").eq(i).addClass("on");
+
+            });
+
+            // top 버튼 나타나기
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 100){
+                    $(".top_btn").stop().fadeIn();
+                }
+                else{
+                    $(".top_btn").stop().fadeOut();
+                }
+            });
+
+            // top 버튼 클릭시 올라가기
+            $(".top_btn").click(function(){
+                $("html,body").stop().animate({scrollTop:0},500);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="hd_center wrap">
+            <h1 class="logo"><a href="#"><img src="img/img_wmf_logo.png" alt="logo"></a></h1>
+            <ul class="gnb clearFix">
+                <li>
+                    <a href="#">브랜드</a>
+                    <ul class="depth2">
+                        <li><a href="#">WMF</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">컬렉션</a>
+                    <ul class="depth2">
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">준비의 순간</a></li>
+                        <li><a href="#">요리의 순간</a></li>
+                        <li><a href="#">식사의 순간</a></li>
+                        <li><a href="#">대화의 순간</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">제품</a>
+                    <ul class="depth2">
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">냄비</a></li>
+                        <li><a href="#">압력솥</a></li>
+                        <li><a href="#">프라이팬</a></li>
+                        <li><a href="#">주방 칼</a></li>
+                        <li><a href="#">커트러리</a></li>
+                        <li><a href="#">주방가전</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">서비스</a>
+                    <ul class="depth2">
+                        <li><a href="#">카탈로그 다운로드</a></li>
+                        <li><a href="#">매뉴얼 & 다운로드</a></li>
+                        <li><a href="#">A/S 안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">컨텐츠</a>
+                    <ul class="depth2">
+                        <li><a href="#">캠페인</a></li>
+                        <li><a href="#">제품 영상</a></li>
+                        <li><a href="#">레시피</a></li>
+                        <li><a href="#">브랜드 영상</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객지원</a>
+                    <ul class="depth2">
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                        <li><a href="#">매장안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="section">
+        <div class="visual">
+            <ul class="panel clearFix">
+                <li><a href="#"><img src="img/visual01.png" alt="img"></a></li>
+                <li><a href="#"><img src="img/visual02.jpg" alt="img"></a></li>
+                <li><a href="#"><img src="img/visual03.jpg" alt="img"></a></li>
+                <li><a href="#"><img src="img/visual04.jpg" alt="img"></a></li>
+            </ul>
+            <ul class="pager vs_panel clearFix">
+                <li class="on"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="cont">
+            <div class="cont_wrap">
+                <ul class="cont_panel">
+                    <li><a href="#"><img src="img/conimg1.png" alt="img"></a></li>
+                    <li><a href="#"><img src="img/conimg2.jpg" alt="img"></a></li>
+                    <li><a href="#"><img src="img/conimg3.png" alt="img"></a></li>
+                </ul>
+                <ul class="cont_pager">
+                    <li class="on"><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="product">
+            <div class="pro_wrap wrap">
+                <ul class="pro_list clearFix">
+                    <!-- 호버시 동그라미 퍼지는 레이아웃 -->
+                    <li><div class="pro_bg"></div></li>
+                    <li><div class="pro_bg"></div></li>
+                    <li><div class="pro_bg"></div></li>
+                    <li><div class="pro_bg"></div></li>
+                </ul>
+            </div>
+            <div class="pro_btn"><a href="#">더보기</a></div>
+            <ul class="sns clearFix">
+                <li><a href="#"><img src="img/sns_face.png" alt="sns"></a></li>
+                <li><a href="#"><img src="img/sns_insta.png" alt="sns"></a></li>
+                <li><a href="#"><img src="img/sns_you.png" alt="sns"></a></li>
+            </ul>
+        </div>
+        <div class="top_btn">
+            <button><a href="#"><img src="img/img_arr_top.png" onmouseover="this.src='img/img_arr_top_a.png';" onmouseout="this.src='img/img_arr_top.png';"></a></button>
+        </div>
+    </div>
+</body>
+</html>

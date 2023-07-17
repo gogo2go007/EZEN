@@ -1,0 +1,100 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+ol,ul,li { list-style: none;}
+a { text-decoration: none; color: #000;}
+.clerFix::after { display: block; content: ""; clear: both;}
+
+.carousel{
+    width: 1200px;
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: aqua;
+}
+.carousel .wrap{
+    width: 400%;
+    margin-left: -100%;  
+}
+.carousel .wrap > li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    line-height: 250px; 
+}
+.carousel .wrap > li .panel li{
+    float: left;
+    width: 20%;
+    height: 250px;
+    margin: 2.5%;
+    box-sizing: border-box;
+    font-size: 3em;
+}
+.carousel .wrap > li .panel .bg1{
+    background-color: antiquewhite;
+}
+.carousel .wrap > li .panel .bg2{
+    background-color: rgb(202, 162, 110);
+}
+.carousel .wrap > li .panel .bg3{
+    background-color: rgb(165, 120, 61);
+}
+.carousel .wrap > li .panel .bg4{
+    background-color: rgb(94, 60, 16);
+}
+.carousel .wrap > li .panel .bg5{
+    background-color: rgb(206, 238, 180);
+}
+.carousel .wrap > li .panel .bg6{
+    background-color:  rgb(133, 180, 94);
+}
+.carousel .wrap > li .panel .bg7{
+    background-color: rgb(80, 128, 42);
+}
+.carousel .wrap > li .panel .bg8{
+    background-color: rgb(33, 70, 3);
+}
+.carousel .wrap > li .panel .bg9{
+    background-color: rgb(170, 228, 231);
+}
+.carousel .wrap > li .panel .bg10{
+    background-color: rgb(83, 190, 196);
+}
+.carousel .wrap > li .panel .bg11{
+    background-color: rgb(18, 130, 136);
+}
+.carousel .wrap > li .panel .bg12{
+    background-color: rgb(1, 50, 53);
+}
+.carousel .wrap > li .panel .bg13{
+    background-color: rgb(240, 202, 180);
+}
+.carousel .wrap > li .panel .bg14{
+    background-color: rgb(204, 117, 67);
+}
+.carousel .wrap > li .panel .bg15{
+    background-color:  rgb(124, 54, 14);
+}
+.carousel .wrap > li .panel .bg16{
+    background-color: rgb(58, 23, 3);
+}
+
+.carousel button{
+    position: absolute;
+    top: 50%;
+    background-color: #000;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+.carousel .prev{
+    left: 0;
+}
+.carousel .next{
+    right: 0;
+}
+
+
+

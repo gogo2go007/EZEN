@@ -1,0 +1,45 @@
+jQuery_시작하기
+
+
+w3schools
+https://www.w3schools.com/
+
+
+객체_주어
+프로퍼티_형용사느낌?
+메서드_동작
+
+프로퍼티랑 메서드의 구별 방법은
+프로퍼티는 ()가 없고 메서드는 ()가 있음.(거의)
+
+객체.메서드();
+
+
+사용법
+방법1. 자바스크립트 연결_
+
+1.파일을 다운 받아서 연결
+
+-https://jquery.com/ 접속
+-다운로드>압축된 파일_클릭말고 오른쪽 버튼 > 다른이름으로 링크저장
+-헤드에 문구 삽입
+<head>
+<script src="jquery-3.6.0.min.js"></script>
+</head>
+
+2.jQuery를 직접 다운로드하고 호스팅하지 않으려면 CDN(Content Delivery Network)에서 jQuery를 포함
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+
+문법
+<script>
+        $("document").ready(function(){
+           이 안에 동작시키고 싶은 문구를 삽입
+        });
+    </script>
+
+
+
+

@@ -1,0 +1,19 @@
+
+
+전체메뉴 내리기 진도 중
+
+class on에 내가 하고 싶은 효과 넣고
+class on 떼고 붙여서 자바스크립트에서 사용
+
+addClass("on");
+removeClass("on");
+
+예시문
+	// class on 붙이기
+ $("#header .gnb").mouseenter(function(){
+                $("#header .gnb").addClass("on");
+            });
+             // class on 떼기
+ $("#header .gnb").mouseleave(function(){
+                $("#header .gnb").removeClass("on");
+            });

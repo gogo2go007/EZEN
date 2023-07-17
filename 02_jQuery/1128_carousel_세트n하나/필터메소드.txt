@@ -1,0 +1,20 @@
+
+
+필터메소드
+
+first()
+last()
+
+appendTo()
+
+.appendTo():4(A).append(B) //A 사이의 처음에 B가 추가된다
+.appendTo():$(A).appendTo(B) //A가 B사이의 마지막에 추가 된다
+
+참고예문
+https://electronic-moongchi.tistory.com/86
+
+prepend()
+prependTo()
+
+css({})
+animate({})

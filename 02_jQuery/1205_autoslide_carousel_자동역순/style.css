@@ -1,0 +1,91 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0;}
+ol,ul,li { list-style: none;}
+a { text-decoration: none; color: #000;}
+.clearFix::after { display: block; content: ""; clear: both;}
+
+section {
+    padding-top: 30px;
+}
+.slide{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.slide .panel{
+    width: 400%;
+}
+.slide .panel li{
+    float: left;
+    width: 25%;
+    height: 500px;
+    line-height: 500px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.slide .panel li:nth-child(1){
+    background-color: aquamarine;
+}
+.slide .panel li:nth-child(2){
+    background-color: pink;
+}
+.slide .panel li:nth-child(3){
+    background-color: cadetblue;
+}
+.slide .panel li:nth-child(4){
+    background-color: yellowgreen;
+}
+.slide .panel li a{
+    font-size: 3em;
+}
+
+.btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -130px;
+    z-index: 9;
+}
+.btn li{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+.btn li a{
+    display: block;
+    color: yellow;
+}
+.btn li:hover,
+.btn li.on { 
+    background-color: #fff;
+}
+.btn li:hover a,
+.btn li.on a{ 
+    color: #000;
+}
+p {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    background-color: blue;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 45px;
+}
+.prev {
+    left: 50px;
+}
+.next {
+    right: 50px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤시 자동 카운트 동작</title>
+    <style>
+        .box{
+            width: 1000px; height: 1200px; background-color: antiquewhite;
+        }
+        .box2{
+            width: 500px; height: 1200px; background-color: #96703d;
+        }
+        .counter-value { 
+           font-size: 60px; /* 글꼴 크기 */
+           text-align:center;
+           padding:16px 0;
+         }
+        .counter-value:after {
+           content: attr(data-desc);
+           display:block;
+           text-transform:uppercase;
+           font-size: 18px;  /* 글꼴 크기 */
+          }
+
+    </style>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+    var a = 0;
+    $(window).scroll(function() {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            //.counter-value에 각각 적용
+            //each문(반복문)을 실행하여 .counter-value에 이벤트를 발생시킨다.
+            $('.counter-value').each(function() {
+                // .counter-value라는 클래스명의 요소를 변수 $this, $this의 속성 "data-count"을 불러와
+                // 변수 countTo로 지정
+                // countTo변수에 .counter-value의 data-count 속성 값인 283을 대입.
+                //countNum:$this.text() = 20, 
+                var $this = $(this),
+                
+                countTo = $this.attr('data-count');
+                $({countNum: $this.text()}).animate({
+                    // countNum:countTo = 90000,280,75,999 20에서 countNum이 된다.
+                    // 애니메이션이 완료될때까지 걸리는 시간
+                    // 애니메이션 효과방식
+                    countNum: countTo},{duration: 2000, easing: 'swing',
+                    
+                    //움직임 각 스텝별로 실행될 함수
+                    step: function() {
+                          //Math.floor -> this.countNum의 값을 정수로 만들
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    // 움직임이 멈춘 후 실행될 함수
+                    complete: function() {
+                        //this.countNum이 $this의 text값이 된다.
+                        $this.text(this.countNum);
+                    }
+                });
+            });
+            a = 1;
+        }
+    });
+
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <div id="counter">
+        <div class="counter-value" data-count="283" data-desc="개설된 박물관">20</div>
+    </div>
+    <div class="box2"></div>
+
+</body>
+</html>

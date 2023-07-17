@@ -1,0 +1,288 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0;}
+img { border: 0; vertical-align: top;}
+ol,ul,li { list-style: none;}
+a { text-decoration: none; color: #000;}
+body { line-height: 1; font-family: 'Noto Sans KR', sans-serif;}
+.clearFix::after { display: block; content: ""; clear: both;}
+.wrap { width: 1170px; margin: 0 auto; }
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+#header {
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+#header .hd_center{
+    display: flex;
+    align-items: center;
+}
+#header .logo {
+    margin: 12px 0;
+}
+#header .gnb { 
+    padding-left: 85px;
+    padding-top: 31px;
+}
+#header .gnb > li {
+    float: left;
+    width: 172px;
+    height: 53px;
+    text-align: center;
+    line-height: 53px;
+    position: relative;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+#header .gnb > li:hover {
+    background-color: orangered;
+}
+#header .gnb > li > a {
+    display: block;
+    color: #666;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+#header .gnb > li:hover a {
+    color: #fff;
+}
+#header .depth2 {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 5;
+}
+/* #header .gnb > li:hover .depth2 {
+    display: block;
+} */
+#header .depth2 li{
+    text-indent: 20px;
+    line-height: 53px;
+    text-align: left;
+    background-color:#666666;
+    transition: all 0.5s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+}
+#header .depth2 li > a{
+    color: #fff;
+    display: block;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    font-size: 15px;
+}
+#header .depth2 li:hover {
+    background-color: rgb(134, 134, 134);
+}
+
+#section{
+    padding-top: 84px;
+}
+#section .visual {
+    position: relative;
+    width: 100%;
+    height: 824px;
+    background-color: aquamarine;
+}
+#section .visual .panel li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 2;
+    display: none;
+}
+#section .visual .panel li img {
+    width: 100%;
+    height: 100%;
+}
+#section .visual .panel li:nth-child(1){
+    background-image: url(img/visual01.png);
+    display: block;
+}
+#section .visual .panel li:nth-child(2){
+    background-image: url(img/visual02.jpg);
+}
+#section .visual .panel li:nth-child(3){
+    background-image: url(img/visual03.jpg);
+}
+#section .visual .panel li:nth-child(4){
+    background-image: url(img/visual04.jpg);
+}
+#section .visual .pager {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+#section .visual .pager li {
+    float: left;
+    margin: 0 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #666;  
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#section .visual .pager li:hover,
+#section .visual .pager li.on {
+    background-color: #fff;
+}
+
+#section .cont {
+    position: relative;
+    width: 100%;
+    height: 763px;
+    overflow: hidden;
+}
+#section .cont .cont_panel li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+#section .cont .cont_panel li a{
+    display: block;
+}
+#section .cont .cont_panel li img{
+    width: 100%;
+}
+#section .cont .cont_panel li:first-child {
+    display: block;
+}
+/* 클릭 on 붙였을때 확대되는 작업 */
+#section .cont .cont_panel li.on {
+    animation: zoom 0.7s 1;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#section .cont .cont_pager{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+#section .cont .cont_pager li {
+    float: left;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #666;  
+    cursor: pointer;
+}
+#section .cont .cont_pager li:hover,
+#section .cont .cont_pager li.on{
+    background-color: #3d3d3d;
+}
+#section .cont .pager li a {
+    display: block;
+}
+
+#section .product {
+    width: 100%;
+    height: 550px;
+    background-color: rgb(243, 242, 242);
+    padding-top: 120px;
+    position: relative;
+}
+#section .product .pro_list li {
+    width: 275px;
+    height: 275px;
+    border: 1px solid rgb(197, 197, 197);
+    float: left;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+#section .product .pro_list li:nth-child(1){
+    background-image: url(img/s01.jpg);
+}
+#section .product .pro_list li:nth-child(2){
+    background-image: url(img/s02.jpg);
+}
+#section .product .pro_list li:nth-child(3){
+    background-image: url(img/s03.jpg);
+}
+#section .product .pro_list li:last-child {
+    margin-right: 0;
+    background-image: url(img/s04.jpg);
+}
+#section .product .pro_btn{
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+#section .product .pro_btn a {
+    font-size: 16px;
+    color: #fff;
+}
+#section .product .pro_btn:hover {
+    background-color: #666666;
+}
+/* 마우스 호버시 동그라미가 퍼지는 작업 */
+#section .pro_list .pro_bg {
+    background-color: #fff;
+    border-radius: 100%;
+    transition: all 1s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+#section .product .pro_list li:hover .pro_bg{
+    width: 1px;
+    height: 1px;
+    transform: scale(750);
+    opacity: 0;
+}
+#section .product .sns {
+    width: 210px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+#section .product .sns li {
+    float: left;
+    margin: 0 10px
+}
+#section button {
+    border: 0;
+} 
+#section .top_btn {
+    position: fixed;
+    top: 600px;
+    right: 20px;
+    display: none;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드_16브랜드</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i = 0;
+            var wid = $(".visual").width();
+            $(".v_btn li").click(function(){
+                i = $(this).index();
+                $(".v_btn li").removeClass("on");
+                $(".v_btn li").eq(i).addClass("on");
+
+                $(".panel").stop().animate({"margin-left": -wid * i});
+            });
+        });
+    </script>
+</head>
+<body>
+   <div id="header">
+    <div class="hd_menu">
+        <h1 class="logo"><a href="#"><img src="img/d566b98b4b18a3a4978654569dcbe489_41_top.jpg" alt="logo"></a></h1>
+        <ul class="gnb clearFix">
+            <li><a href="#">BRAND</a></li>
+            <li><a href="#">16 PRODUCT</a></li>
+            <li><a href="#">MEDIA</a></li>
+            <li><a href="#">REVIEW</a></li>
+        </ul>
+    </div>
+    <div class="visual">
+        <ul class="panel clearFix">
+            <li><img src="img/main_visual1.jpg" alt="img"></li>
+            <li><img src="img/main_visual2.jpg" alt="img"></li>
+            <li><img src="img/main_visual3.jpg" alt="img"></li>
+            <li><img src="img/main_visual4.jpg" alt="img"></li>
+            <li><img src="img/main_visual5.jpg" alt="img"></li>
+        </ul>
+        <ul class="v_btn clearFix">
+            <li class="on"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+애니메이션 사용시 들어가는 문구
+ease-in-out
+
+사용예
+    animation: upDown 2s ease-in-out infinite;
+투명도를 이용한 애니메이션 사용시 이용
+    animation-delay:0.6s;
+
+
+transition-timing-function
+영상 편집할 때 영상의 앞뒤에 투명도를 가지고 페이드인 페이드아웃하는 그래프가 있는데 그거랑 똑같다
+ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier, steps 가 있다
+함수들
+ 
+
+ease ; 천천-빠름-천천
+linear ; 등속
+ease-in ; 천천-보통
+ease-out ; 보통-천천
+ease-in-out ; 천천-보통-천천
+cubic-bezier ; 커스텀
+steps ; 뚝뚝 끊어 보여준다

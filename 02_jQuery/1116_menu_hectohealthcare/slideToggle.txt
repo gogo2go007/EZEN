@@ -1,0 +1,8 @@
+
+slideToggle
+
+slide up & slide down 두 동작 다 포함
+>.slideToggle(300)
+ 
+사용예시
+$(this).children.(".gnb>li").hover().slideToggle(300);

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이디야_멤버스</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        a{ text-decoration: none; color: #000;}
+        ol,ul,li{ list-style: none;}
+        img{ border: 0; vertical-align: top;}
+        body{font-family: 'Noto Sans KR', 
+        '나눔고딕', NanumGothic, '맑은 고딕', MalgunGothic, '돋움', Dotum, sans-serif;
+        line-height: 1;
+        }
+        .clear_fix::after{ content: ""; display: block; clear: both; }
+        
+        .center{ width: 1180px; margin: 0 auto; }
+        
+         /*        상단영역*/
+        #header{ width: 100%; padding: 40px 0; border-bottom: 1px solid #000; background-color: #fff; position: relative;}
+        #header .gnb_bg{ width:100%; height:250px; position:absolute; top:113px; left:0; display: none; background-color:#fff;  border-bottom: 1px solid #e3e3e3;}
+        #header .logo{ text-align: center;}   
+        #header .logo a{ display: block;}   
+        #header .gnb{ width: 960px;  margin: 0 auto; }
+        #header .gnb > li{ float: left; padding: 0 40px; position: relative;}
+        #header .gnb > li > a{ font-family: 'Nunito Sans'; font-size: 16px; }
+        #header .gnb > li > a:after{ display: block; content: ""; width: 0px; height: 4px; position: relative; top:0; left: 50%; background-color: #000; margin-top: 7px; transform: translateX(-50%); transition: all,0.3s;}
+        #header .gnb > li > a:hover:after{ background-color: #000; width: 100%; height: 4px; }
+
+        #header .gnb > li .depth2{ position: absolute; top:41px; left: 25px; width: 100%; background-color:#fff; padding: 20px 0; display: none; transition: all 1s;}
+        #header .gnb > li .depth2 li{ padding-left: 10px; line-height: 30px;}
+        #header .gnb > li .depth2 li a{ color: #000; font-size: 13px;}
+        
+         /*        이디야 멤버쉽 메뉴*/
+        #container .main_img{ width: 100%; height: 460px; background-image: url(members_intro_visual.jpg);}
+        #container .main_img h2{ text-align: center; color: #000; font-weight: 300; font-size: 38px; padding-top: 80px; margin-bottom: 30px;}
+        #container .main_img p{ text-align: center; color: #000; font-weight: 300; font-size: 18px; margin-bottom: 80px;}
+        #container .main_img .t_menu{ overflow: hidden; width: 1008px; margin: 0 auto;}
+        #container .main_img .t_menu li{ float: left; width: 200px; height: 40px; text-align: center; line-height: 40px; border: 1px solid #d3d3d3;}
+        #container .main_img .t_menu li{ border-right: 0;}
+        #container .main_img .t_menu li:last-child{ border-right: 1px solid #d3d3d3;}
+        #container .main_img .t_menu li a{ font-size: 14px; display: block; color:#8b8b8b; }
+        #container .main_img .t_menu li:hover{background-color: #d3d3d3;}
+        #container .main_img .t_menu li:hover a{ color: #fff;}
+        
+        /*        이디야 멤버쉽 소개*/
+        #container .cont_img{ width: 100%; height: 680px; background-image: url(members_intro_bg01.jpg);}
+        #container .cont_img .cont_text{ width: 1180px; margin: 0 auto; padding-top: 120px;}
+        #container .cont_img .cont_text h2{ 
+            font-size: 38px;  font-weight: 400; 
+            font-family: '나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum; 
+            letter-spacing: -3px;
+        }
+        #container .cont_img .cont_text h3{ letter-spacing: -1px; font-size: 22px; margin-bottom: 20px; font-weight: 500;}
+        #container .cont_img .cont_text p{ font-weight: 400; font-size: 16px; color: #707070; font-family: '나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum;  line-height: 20pt; margin-bottom: 80px;}
+        #container .cont_img .cont_text img{ margin: 40px 0;}
+        #container .cont_img .cont_text a{ display: block; width: 180px; height: 40px; text-align: center; line-height: 40px; border: 1px solid #000; cursor: pointer; font-size: 15px; letter-spacing: 1px;}
+        #container .cont_img .cont_text a:hover{ background-color: #042564; color: #fff;}
+        
+        /*        이디야카드*/
+        #container .card_img{ 
+            width: 100%; height: 680px; 
+            background-image: url(members_intro_bg02.jpg); 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;           
+            background-position: center; 
+           
+        }
+        #container .card_img .card_text{ padding-top: 120px; float: right; margin-right: 580px;}
+        #container .card_img .card_text h2{ 
+            font-size: 38px;  font-weight: 400; 
+            font-family: '나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum; 
+            letter-spacing: -3px;
+        }
+        #container .card_img .card_text h3{ letter-spacing: -1px; font-size: 22px; margin-bottom: 20px; font-weight: 500;}
+        #container .card_img .card_text p{ font-weight: 400; font-size: 16px; color: #707070; font-family: '나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum;  line-height: 20pt; margin-bottom: 80px;}
+        #container .card_img .card_text img{ margin: 40px 0;}
+        #container .card_img .card_text a{ display: block; width: 180px; height: 40px; text-align: center; line-height: 40px; border: 1px solid #000; cursor: pointer; font-size: 15px; letter-spacing: 1px;}
+        #container .card_img .card_text a:hover{ background-color: #042564; color: #fff;}
+        
+        /*        이디야멤머쉽*/
+        #container .members{ width: 100%; height: 680px; background-image: url(members_intro_bg03.jpg); background-repeat: no-repeat; background-attachment: fixed;}
+        #container .members .cont_text{ width: 1180px; margin: 0 auto; padding-top: 120px;}
+        #container .members .cont_text h2{ 
+            font-size: 38px;  font-weight: 400; 
+            font-family: '나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum; 
+            letter-spacing: -3px;
+        }
+        #container .members .cont_text h3{ letter-spacing: -1px; font-size: 22px; margin-bottom: 20px; font-weight: 500;}
+        #container .members .cont_text p{ font-weight: 400; font-size: 16px; color: #707070; font-family: '나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum;  line-height: 20pt; margin-bottom: 80px;}
+        #container .members .cont_text img{ margin: 40px 0;}
+        #container .members .cont_text a{ display: block; width: 180px; height: 40px; text-align: center; line-height: 40px; border: 1px solid #000; cursor: pointer; font-size: 15px; letter-spacing: 1px;}
+        #container .members .cont_text a:hover{ background-color: #042564; color: #fff;}
+        
+         /*       하단영역*/
+        #footer{ width: 100%; background-color: #262626; text-align: center;}
+        #footer .footer_line{ width: 100%;  border-bottom: 1px solid #434141;}
+        #footer .f_top{ overflow: hidden; padding: 20px 0; width: 750px; margin: 0 auto;}
+        #footer .f_top li{  margin: 3px 19px; font-size: 13px; float: left; }
+        #footer .f_top li:nth-child(2) a{ color: #d8d8d8}
+        #footer .f_top li a{color: #646262; }
+        
+        #footer .f_bot{margin: 40px 0; padding-bottom: 30px; }
+        #footer .f_bot p{ font-size: 12px; color: #646262; line-height: 16pt; padding-bottom: 20px; }
+        #footer .f_bot .f_bot_line{ padding: 0 10px; padding-top: 5px;}
+        
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="gnb_bg"></div>
+    <div class="center">
+        <h1 class="logo"><a href="#"><img src="top_logo.gif" alt="로고"></a></h1>
+        <ul class="gnb .clear_fix">
+            <li>
+                <a href="#">원두</a>
+                <ul class="depth2">
+                    <li><a href="#">이디야블렌드</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메뉴</a>
+                <ul class="depth2">
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">푸드</a></li>
+                    <li><a href="#">MD</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">유통제품</a>
+                <ul class="depth2">
+                    <li><a href="#">스틱커피(비니스트)</a></li>
+                    <li><a href="#">커피믹스</a></li>
+                    <li><a href="#">캡슐커피</a></li>
+                    <li><a href="#">컵커피</a></li>
+                    <li><a href="#">수출입거래</a></li>
+                    <li><a href="#">B2B/특판/대리점 거래</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">이디야멤버스</a>
+                <ul class="depth2">
+                    <li><a href="#">멤버스 소개</a></li>
+                    <li><a href="#">이디야카드</a></li>
+                    <li><a href="#">선물하기</a></li>
+                    <li><a href="#">이디야오더</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">상품권</a>
+                <ul class="depth2">
+                    <li><a href="#">기프트카드</a></li>
+                    <li><a href="#">모바일상품권</a></li>
+                    <li><a href="#">단체·기업 구매</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">사회공헌</a>
+                <ul class="depth2">
+                        <li><a href="#">메이트 희망기금</a></li>
+                        <li><a href="#">캠퍼스 희망기금</a></li>
+                        <li><a href="#">식수위생 캠페인</a></li>
+                        <li><a href="#">이디야의 동행</a></li>
+                        <li><a href="#">기타 활동</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">공지사항</a>
+                <ul class="depth2">
+                    <li><a href="#">이디야 소식</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">홈카페 레시피</a></li>
+                    <li><a href="#">이디야 유튜브</a></li>
+                </ul>
+            </li>
+        </ul>   
+   </div>
+</div>
+<div id="container">
+    <div class="main_img">
+        <h2>이디야멤버스</h2>
+        <p>쉽고 빠른 주문, 편리한 결제와 적립은 기본<br>친구에게 선물까지, 이디야멤버스를 경험해보세요. </p>
+        <ul class="t_menu">
+            <li><a href="#">멤버스 소개</a></li>
+            <li><a href="#">이디야카드</a></li>
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">이디야오더</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+        </ul>
+    </div>
+    <div class="cont_img">
+       <div class="cont_text">
+            <h2>이디야커피의<br>특별한 멤버십을 소개합니다.</h2>
+            <img src="intro_tt.gif" alt="라인">
+            <h3>주문과 동시에 결제와 적립이 바로!</h3>
+            <p>FREE쿠폰 & 이벤트의 혜택이 풍성한 <br>이디야멤버스로 이디야커피를 즐기세요. </p>
+            <a>이디야멤버스 안내</a>                       
+        </div>
+    </div>
+    <div class="card_img">
+       <div class="card_text">
+            <h2>커피가 필요한 순간엔<br>이디야카드</h2>
+            <img src="intro_tt.gif" alt="라인">
+            <h3>이제 지갑을 꺼낼 필요없이<br>이디야멤버스 App 하나로 충분합니다.</h3>
+            <p>마음에 드는 카드를 충전해, 전국 이디야 매장에서<br>더욱 편리하게 이용해보세요.</p>
+            <a>이디야카드 안내</a>                       
+        </div>
+    </div>
+    <div class="members">
+       <div class="cont_text">
+            <h2>소중한 사람에게 <br>따뜻한 마음을 전하세요.</h2>
+            <img src="intro_tt.gif" alt="라인">
+            <h3>누군가와 더 가까워지고 싶을 땐</h3>
+            <p>선물하기 기능과 함께 소중한 마음까지 담은  <br>메시지를 남겨보세요. </p>
+            <a>이디야멤버스 안내</a>                       
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div  class="footer_line">
+        <ul class="f_top">
+            <li><a href="#">영상정보처리기기 운영·관리방침</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">멤버스 이용약관</a></li>
+            <li><a href="#">가맹 안내</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">점주의 방</a></li>
+        </ul>        
+    </div>
+        <div class="f_bot">
+            <h1 class="f_logo"><img src="bottom_logo.gif" alt="하단로고"></h1>
+            <p>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17) <img class="f_bot_line" src="footer_line.gif" alt="">TEL : 02-543-6467<img src="footer_line.gif" alt="">
+             FAX : 02-543-7191<br>
+             사업자등록번호 : 107-86-16302<img class="f_bot_line" src="footer_line.gif" alt="">통신판매업 신고 : 강남 제 002519호<img class="f_bot_line" src="footer_line.gif" alt=""> 대표이사 : 문창기
+            </p>
+            <p>ⓒ 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</p>
+        </div>
+</div> 
+<script>
+    const gnb = document.querySelector(".gnb");
+    const depth2 = document.querySelectorAll(".depth2");
+    const gnbbg = document.querySelector(".gnb_bg");
+
+    gnb.addEventListener("mouseenter",function(){
+        gnbbg.style.display="block";
+        
+        for(let i = 0; i < depth2.length; i++){
+            depth2[i].style.display="block";
+        }
+    });
+
+    gnb.addEventListener("mouseleave",function(){
+        gnbbg.style.display = "none";
+
+        for(let i = 0; i < depth2.length; i++){
+            depth2[i].style.display = "none";
+        }
+    });
+</script>
+</body>
+</html>

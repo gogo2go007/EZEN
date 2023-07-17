@@ -1,0 +1,64 @@
+@charset "UTF-8";
+*{ margin: 0; padding: 0;}
+img{ border: 0; vertical-align: top;}
+ol,ul,li{ list-style: none;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1;}
+.clearFix::after{ display: block; content: ""; clear: both;}
+
+.carousel{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .panel{
+    /* 슬라이드 나란히 배열하기 위한 가로값 */
+    width: 4000px;
+}
+.carousel .panel li{
+    width: 1000px;
+    height: 500px;
+    float: left;
+    line-height: 400px;
+    font-size: 3em;
+    text-align: center;
+}
+.carousel .panel li:nth-child(1){
+    background-color: blueviolet;
+}
+.carousel .panel li:nth-child(2){
+    background-color: rosybrown;
+}
+.carousel .panel li:nth-child(3){
+    background-color: green;
+}
+.carousel .panel li:nth-child(4){
+    background-color: beige;
+}
+.carousel .btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -100px;
+}
+.carousel .btn li{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: darkgray;
+    border-radius: 50%;
+    margin: 10px;
+    /* 글씨 안보이게 */
+    text-indent: -9999px;
+    box-sizing: border-box;
+}
+.carousel .btn li a{
+    display: block;
+}
+.carousel .btn li.current,
+.carousel .btn li:hover{
+    background-color: #000;
+    border: 3px solid #fff;
+}

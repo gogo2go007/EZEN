@@ -1,0 +1,13 @@
+애니메이션
+
+애니메이션 네임 꼭 적고
+키프레임
+animation-name (en-US)
+이 애니메이션의 중간 상태를 지정합니다. 중간 상태는 @keyframes 규칙을 이용하여 기술합니다.
+
+
+@-moz-keyframe
+
+@-webkit-keyframes
+크로스브라우징
+벤더 프리픽스(Vendor Prefix)

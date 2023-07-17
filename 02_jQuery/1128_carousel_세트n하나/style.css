@@ -1,0 +1,74 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+img { border: 0; vertical-align: top;}
+ol,ul,li {list-style: none; }
+a { text-decoration: none; color: #000;}
+body {line-height: 1;}
+.clearFix::after { display: block; content: ""; clear: both;}
+
+.carousel { 
+    width: 1000px;
+    margin: 0 auto;
+    background-color: grey;
+    position: relative;
+    overflow: hidden;
+}
+.carousel .wrap {
+    width: 400%;
+    /* 두번째 목록 보이게끔 작업 */
+    /* 이전 버튼 눌렀을때 작동이 되게하기 위한 작업 */
+    margin-left: -100%;
+}
+.carousel .wrap > li {
+    width: 25%;
+    float: left;
+}
+.carousel .wrap > li .panel li {
+    width: 450px;
+    height: 300px;
+    line-height: 250px;
+    font-size: 3em;
+    text-align: center;
+    float: left;
+    margin: 20px 25px;
+}
+.carousel .wrap  li .panel li.bg1{
+    background-color: aqua;
+}
+.carousel .wrap  li .panel li.bg2{
+    background-color: aquamarine;
+}
+.carousel .wrap  li .panel li.bg3{
+    background-color: bisque;
+}
+.carousel .wrap  li .panel li.bg4{
+    background-color: blueviolet;
+}
+.carousel .wrap  li .panel li.bg5{
+    background-color: brown;
+}
+.carousel .wrap  li .panel li.bg6{
+    background-color: cadetblue;
+}
+.carousel .wrap  li .panel li.bg7{
+    background-color: chartreuse;
+}
+.carousel .wrap  li .panel li.bg8{
+    background-color: cornflowerblue;
+}
+
+.carousel p{
+    width: 40px;
+    height: 30px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+}
+.carousel .prev{
+    left: 0;
+}
+.carousel .next{
+    right: 0;
+}
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브웨이 메뉴연습</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6b81ac2067.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#header .gnb").mouseenter(function(){
+                $("#header").addClass("on");
+            });
+            $("#header .gnb").mouseleave(function(){
+                $("#header").removeClass("on");
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="hd_m_bg"></div>
+        <div class="hd_wrap wrap">
+            <div class="hd_top clearFix">
+                <h1 class="logo"><img src="img/logo_w.png" alt="logo"></h1>
+                <ul class="glob_m">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#"><img src="img/icon_utill_global.png" alt="icon"></a></li>
+                </ul>
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#">메뉴소개</a>
+                    <ul class="depth2">
+                        <li><a href="#">샌드위치</a></li>
+                        <li><a href="#">랩ㆍ기타</a></li>
+                        <li><a href="#">샐러드</a></li>
+                        <li><a href="#">아침메뉴</a></li>
+                        <li><a href="#">스마일 썹</a></li>
+                        <li><a href="#">단체메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">이용방법</a>
+                    <ul class="depth2">
+                        <li><a href="#">써브웨이 이용방법</a></li>
+                        <li><a href="#">단체메뉴 이용방법</a></li>
+                        <li><a href="#">신선한 재료 소개</a></li>
+                        <li><a href="#">App 이용방법</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">새소식</a>
+                    <ul class="depth2">
+                        <li><a href="#">이벤트ㆍ프로모션</a></li>
+                        <li><a href="#">뉴스ㆍ공지사항</a></li>
+                        <li><a href="#">광고영상</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">써브웨이</a>
+                    <ul class="depth2">
+                        <li><a href="#">써브웨이 역사</a></li>
+                        <li><a href="#">써브웨이 약속</a></li>
+                        <li><a href="#">샌드위치 아티스트 지원</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">가맹점</a>
+                    <ul class="depth2">
+                        <li><a href="#">써브웨이 프랜차이즈</a></li>
+                        <li><a href="#">가맹관련 FAQ</a></li>
+                        <li><a href="#">가맹신청ㆍ문의</a></li>
+                        <li><a href="#">지사안내</a></li>
+                        <li><a href="#">사업설명회</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">온라인주문</a>
+                    <ul class="depth2">
+                        <li><a href="#">FAST-SUB</a></li>
+                        <li><a href="#">HOME-SUB</a></li>
+                        <li><a href="#">단체주문</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="section">
+        <div class="visual_wrap">
+            <div class="visual"><a href="#"></a></div>
+            <ul class="visual_btn clearFix">
+                <li class="on"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <ul class="visual_m clearFix">
+            <li class="serch"><a href="#"><img src="img/icon_map.png" alt="icon"><p>매장찾기</p></a></li>
+            <li class="send"><a href="#"><img src="img/icon_franchise.png" alt="icon"><p>가맹신청 문의</p></a></li>
+        </ul>
+        <div class="cont1">
+            <div class="con1_arrow">
+                <div class="left_arrow"><a href="#"><i class="fa-solid fa-angle-left"></i></a></div>
+                <div class="right_arrow"><a href="#"><i class="fa-solid fa-angle-right"></i></a></div>
+            </div>
+            <div class="cont1 wrap clearFix">
+                <div class="sub_menu_bg"><img src="img/bul_tit.png" alt=""></div>
+                <h2>Subway's Menu</h2>
+                <ul class="sub_menu clearFix">
+                    <li class="on"><a href="#">클래식</a></li>
+                    <li><a href="#">프레쉬&라이트</a></li>
+                    <li><a href="#">프리미엄</a></li>
+                    <li><a href="#">아침메뉴</a></li>
+                </ul>
+                <ul class="sub_m_content clearFix">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <div class="sub_m_img">
+                                    <img src="img/sandwich_cl01_01.jpg" alt="pic">
+                                </div>
+                                <div class="sub_m_txt">
+                                    <h3>에그마요</h3>
+                                    <p>부드러운 달걀과 고소한 마요네즈가 만나<br>
+                                        더 부드러운 스테디셀러
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <div class="sub_m_img">
+                                    <img src="img/sandwich_cl02_01.jpg" alt="pic">
+                                </div>
+                                <div class="sub_m_txt">
+                                    <h3>이탈리안 비엠티</h3>
+                                    <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!<br>
+                                        전세계가 사랑하는 써브웨이의 베스트셀러!<br>
+                                        Biggest Meatiest Tastiest, its’ B.M.T
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <div class="sub_m_img">
+                                    <img src="img/sandwich_cl04_01.jpg" alt="pic">
+                                </div>
+                                <div class="sub_m_txt">
+                                    <h3>비엘티</h3>
+                                    <p>오리지널 아메리칸 스타일 베이컨의<br>
+                                        풍미와 바삭함 그대로
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <div class="sub_m_img">
+                                    <img src="img/sandwich_cl06_01.jpg" alt="pic">
+                                </div>
+                                <div class="sub_m_txt">
+                                    <h3>햄</h3>
+                                    <p>기본 중에 기본!<br>
+                                        풍부한 햄이 만들어내는<br>
+                                        입 안 가득 넘치는 맛의 향연
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

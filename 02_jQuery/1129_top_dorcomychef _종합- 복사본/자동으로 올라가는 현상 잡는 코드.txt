@@ -1,0 +1,7 @@
+
+
+$(".recipe_right").click(function(e){
+                // 클릭했을때 위로 자동이동하는 현상 잡아줌
+                e.preventDefault();
+                
+            });

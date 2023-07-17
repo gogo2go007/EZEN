@@ -1,0 +1,63 @@
+<style type="text/css">
+
+</style>
+- </head>바로 위에 기입한다.
+- css를 적용할때 입력한다.
+
+-----------------------------------------------
+a 링크태그
+
+a:link 링크 맨처음 걸었을때
+a:active
+a:hover   마우스 호버시 효과
+a:visited 사이트 방문후 보여주는 효과
+
+-----------------------------------------------
+*** CSS명령어 ***
+color:red; 글자색상
+font-size:15pt; 글자크기
+font-weight:bold; 두껍게
+font-style:italic; 이탤릭체
+             :normal; 이탤릭체 해제
+text-decoration:none; 밑줄 제거
+                     :underline; 밑줄 생성
+                     :line-through; 취소선
+font-family:"휴먼매직체"; 글자종류
+text-align:center;
+
+-----------------------------------------------------------
+순서가 있는 목록태그
+OL - Ordered List
+
+순서가 없는 목록태그
+UL - Unordered List
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+정의목록태그
+<DL>
+
+<dl>
+  <dt></dt>
+  <dd></dd>
+</dl>
+
+list-style:none; ul의 점 없애고자 할때 사용
+교촌치킨_강성찬.psd
+교촌치킨_강성찬.jpg
+-----------------------------------------------------------
+테이블 태그
+<table>
+<tr>
+<td></td>
+<tr>
+</table>
+
+border-width:1px;
+border-style:solid;
+border-color:black;
+border-collapse: collapse;
+

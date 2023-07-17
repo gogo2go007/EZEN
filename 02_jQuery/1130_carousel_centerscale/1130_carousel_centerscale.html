@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가운데부각</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".right_btn").click(function(){
+                $(".panel").stop().animate({"margin-left":"-1290px"},200,function(){
+                    $(".panel li").first().appendTo(".panel");
+                    $(".panel").css({"margin-left":"-550px"});
+                });
+            });
+
+            $(".left_btn").click(function(){
+                $(".panel").stop().animate({"margin-left":"740px"},200,function(){
+                    $(".panel li").last().prependTo(".panel");
+                    $(".panel").css({"margin-left":"-550px"});
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="carousel">
+            <ul class="panel clearFix">
+                <li class="panel1">0001</li>
+                <li class="panel2">0002</li>
+                <li class="panel3">0003</li>
+                <li class="panel4">0004</li>
+                <li class="panel5">0005</li>
+                <li class="panel6">0006</li>
+            </ul>
+            <button class="left_btn"></button>
+            <button class="right_btn"></button>
+        </div>
+    </section>
+</body>
+</html>

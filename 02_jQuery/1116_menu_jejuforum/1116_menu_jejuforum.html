@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴_제주포럼</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".gnb > li").mouseenter(function(){
+                $(this).children(".depth2").stop().slideDown(400);
+            });
+            $(".gnb > li").mouseleave(function(){
+                $(this).children(".depth2").stop().slideUp(400);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="hd_line"></div>
+        <div class="hd_menu center">
+            <h1 class="logo"><a href=""><img src="img/logo.jpg" alt="logo"></a></h1>
+            <ul class="gnb clearFix">
+                <li>
+                    <a href="#">ABOUT</a>
+                    <ul class="depth2">
+                        <li><a href="#">OUR MISSION</a></li>
+                        <li><a href="#">HISTORY</a></li>
+                        <li class="space"><a href="#">WORLD LEADERS<br>MESSAGES</a></li>
+                        <li><a href="#">GOVERNANCE</a></li>
+                        <li><a href="#">HOST AND ORGANIZER</a></li>
+                        <li><a href="#">LOGO</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">FORUM</a>
+                    <ul class="depth2">
+                        <li><a href="#">TIMETABLE</a></li>
+                        <li><a href="#">PROGRAM</a></li>
+                        <li><a href="#">SPEAKERS</a></li>
+                        <li><a href="#">SIDE EVENTS</a></li>
+                        <li><a href="#">PARTNERS</a></li>
+                        <li><a href="#">VENUE</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">NEWS</a>
+                    <ul class="depth2">
+                        <li><a href="#">PRESS RELEASES</a></li>
+                        <li><a href="#">NOTICE</a></li>
+                        <li><a href="#">EMPLOYMENT</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">PUBLICATIONS</a>
+                    <ul class="depth2">
+                        <li><a href="#">PUBLICATIONS</a></li>
+                        <li><a href="#">PHOTOS</a></li>
+                        <li><a href="#">VIDEOS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="section">
+        <div class="sec_wrap center">
+            <div class="sec_left">
+                <img src="img/file1_1658457427.png" alt="img">
+                <div class="btn">
+                    <div class="l_btn"><a href="#"><img src="img/vprev.png" alt="pre"></a></div>
+                    <div class="r_btn"><a href="#"><img src="img/vnext.png" alt="next"></a></div>
+                </div>
+            </div>
+            <div class="sec_right">
+                <div class="sec_right_box">
+                    <h2><img src="img/220720_mainquick_title.png" alt="title"></h2>
+                    <img src="img/mainquick_bg1.png" alt="bg">
+                    <ul class="sec_r_m">
+                        <li>
+                            <a href="#">
+                                <div class="sec_box">
+                                    <p>PROGRAM<br>TIMETABLE</p>
+                                    <img src="img/220720_mainquick_ico1.png" alt="icon">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="sec_box">
+                                    <p>PROGRAMS</p>
+                                    <img src="img/220720_mainquick_ico2.png" alt="icon">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="sec_box">
+                                    <p>SPEAKERS</p>
+                                    <img src="img/220725_mainquick_ico3.png" alt="icon">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="sec_box">
+                                    <p>LIVE<br>STREAMING</p>
+                                    <img src="img/220720_mainquick_ico4.png" alt="icon">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

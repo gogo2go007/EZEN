@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜지션 활용하기</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .box1{
+            width: 200px; height: 100px;
+            background-color: #ffb552;
+            cursor: pointer;
+            transition: width 1s;
+        }
+        .box1:hover{
+            width: 350px;
+        }
+        .box2{
+            margin-top: 20px;
+            width: 300px; height: 300px;
+            background-color: #52d7ff;
+            transition: width 1s, height 1.5s, background-color 2s;
+            cursor: pointer;
+        }
+        .box2:hover{
+            width: 400px; height: 400px;
+            background-color: rebeccapurple;
+        }
+        
+        
+        .cont1{
+            width: 350px; height: 380px; 
+            box-sizing: border-box;
+            border-top: 3px solid #333;
+            margin-top: 60px;
+            cursor: pointer;
+            margin-top: 20px; margin-left: 20px;
+        }
+        .cont1:hover .tit01{ 
+            background-color: #333; color: #fff;
+            transition: all 0.5s;
+        }
+        .cont1:hover .con1_img01 img{
+            transform: scale(1.2); 
+        }
+        .cont1:hover{
+            box-shadow: 0px 0px 10px #535353;
+            transition: all 0.5s;
+        }
+        .cont1 .tit01{ 
+            padding-top: 60px; padding-bottom: 65px; padding-left: 10px; 
+            font-size: 18px;
+        } 
+        .cont1 .con1_img01{
+            width: 100%;
+            overflow: hidden;
+        }
+        .cont1 .con1_img01 img{ 
+            width: 100%;
+            transition: all 1s;
+        }   
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    
+    <div class="cont1">
+        <h3 class="tit01">
+            [더벨] 루시아홀딩스, 도산대로 루시아벨트 '청신호'
+        </h3>
+        <div class="con1_img01"><img src="16626154429.png" alt="사진1"></div>
+    </div>
+</body>
+</html>

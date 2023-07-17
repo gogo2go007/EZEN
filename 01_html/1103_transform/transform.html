@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transform알아보기</title>
+    <style>
+        a{ text-decoration: none; color: #000;}
+        .clearFix::after{ display: block; content: ""; clear: both; }
+        
+        .cont{
+            width: 300px; height: 150px; font-size: 1.3em;
+            border: 3px solid #000; margin-bottom: 20px;
+            line-height: 150px; text-align: center;
+            background-color: pink; cursor: pointer;
+            transition: all 0.5s; 
+        }
+        .box1:hover{
+            transform: translate(100px, 50px);
+        }
+        .box2:hover{
+/*
+            원래 정중앙을 중심으로 회전되지만 
+            lefe top을 중심으로 회전시킬때 사용
+*/
+            transform-origin: left top;
+            transform: rotate(-30deg);
+            margin: 30px;
+        }
+        .box3{
+            transform-origin: left top;
+            margin-bottom: 80px;
+        }
+        .box3:hover{
+            transform: scale(1.3);   
+        }
+        .box4{
+            transform-origin: left top;
+            width: 50px; height: 200px;
+            transform: skewX(20deg);
+        }
+        .wrap:hover .box4{
+/*            tranform 여러개 적용시 한칸씩 띄어서 나열*/
+            transform: skewX(20deg) translate(200px); 
+        }
+        
+        
+/*        카노실습*/
+        .red_btn{
+            width: 300px; height: 70px;
+            background-color: crimson;
+            text-align: center; line-height: 40px;
+            border-radius: 20px;
+            margin: 100px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .red_btn .nemo{
+            width: 30px; height: 130px;
+            background-color: rgba(255, 255, 255, 0.32); 
+            position: absolute; left: 0; top: -50px;
+            transform: skewX(-15deg) translate(-40px);
+            transition: all 0.5s;
+        }
+        .red_btn:hover .nemo{
+            transform:  skewX(-15deg) translate(310px);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="cont box1">translate 이동</div>
+    <div class="cont box2">rotate 회전</div>
+    <div class="cont box3">scale 확대/축소</div>
+    <div class="wrap">
+        <div class="cont box4">skew</div>  
+   </div>
+    
+<!--    카노실습-->
+
+    <div class="red_btn">
+        <a href="#">
+            <p class="txt">국내유통처 입점 문의하기</p>
+            <p class="nemo"></p>           
+        </a>
+    </div>
+</body>
+</html>

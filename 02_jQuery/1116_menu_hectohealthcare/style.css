@@ -1,0 +1,421 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ol,ul,li{ list-style: none;}
+img{ border: 0; vertical-align: top;}
+a{ text-decoration: none; color: #000;}
+body{ line-height: 1; font-family: 'Noto Sans KR', sans-serif;}
+.clearFix::after{display: block; content: ""; clear: both;}
+/* font-family: 'Montserrat', sans-serif; */
+
+#header{ width: 100%; position: relative;}
+#header .hd_contents .hd_contents_img{
+    width: 100%;
+    height: 969px;
+    border-radius: 0 0 0 150px;
+    background-color: red;
+    overflow: hidden;
+}
+#header .hd_contents .hd_contents_img img{
+    width: 100%;
+    height: 100%;
+}
+#header .hd_contents .hd_menu{ 
+    width: 1703px; 
+    height: 100px;
+    margin: 0 auto; 
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header .hd_contents .hd_menu h1{
+    float: left;
+    padding: 29px 0;
+}
+#header .hd_contents .hd_menu .gnb{
+    float: left;
+    margin-left: 70px;
+    box-sizing: border-box;
+}
+#header .hd_contents .hd_menu .hamberger_m{
+    float: right;
+    padding: 35px 0;
+}
+#header .hd_contents .gnb > li{
+    float: left;
+    line-height: 100px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+#header .hd_contents .gnb > li > a{
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+#header .hd_contents .gnb > li.on > a{
+    color: #faa61a;
+}
+#header .hd_contents .gnb > li:hover > a{
+    color: #faa61a;
+}
+.depth2{
+    width: 150px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: #faa61a;
+    border-radius: 0 30px 30px 30px;
+    position: absolute;
+    top: 100px; left: 0;
+    display: none;
+}
+.depth2 li{
+    line-height: 30px;
+}
+.depth2 li a{
+    font-size: 15px;
+    color: rgba(240, 248, 255, 0.527);
+    font-weight: 400;
+    transition: all 0.5s;
+    position: relative;
+}
+
+/* 호버시 밑줄 글자 가로값만큼 나오게 하기 위한 작업 */
+.depth2 li a span::before{
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 0;
+    background-color: rgb(240, 255, 255);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: all 0.5s;
+}
+.depth2 li:hover a{
+    color: azure;
+}
+.depth2 li:hover a span::before{
+    width: 100%;
+}
+.con_txt{
+    position: absolute;
+    top: 33%;
+    left: 8%;
+}
+.con_txt h3{
+    font-size: 22px;
+}
+.con_txt h2{
+    font-size: 80px;
+    padding: 40px 0;
+    letter-spacing: -4px;
+}
+.con_txt h2 span{
+    color: #faa61a;
+}
+.con_txt p{
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.con_txt p span{
+    font-weight: bold;
+}
+.con_txt .con_btn { 
+    font-size: 20px;
+    display: flex;
+    cursor: pointer;
+}
+.con_txt .con_btn .con_l_btn{ 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50px 0px 50px 50px;
+    background-color: #fff;
+    position: relative;
+    margin-top: 120px;
+}
+.con_txt .con_l_btn .fa-chevron-left{
+    position: absolute;
+    top: 36%;
+    left: 39%;
+}
+.con_txt .con_btn .con_r_btn{ 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50px 50px 50px 0px;
+    background-color: #faa61a;
+    position: relative;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+.con_txt .con_r_btn .fa-chevron-right{
+    position: absolute;
+    top: 36%;
+    left: 39%;
+    color: #fff;
+}
+.main-scroll-icon{
+    margin-top: 150px;
+    margin-left: 45px;
+}
+.main-scroll-icon .circle_txt{
+    font-size: 10px;
+    color:  #919191;
+    font-weight: 300;
+    display: inline-block;
+}
+
+/* 애니메이션구간 */
+.main-scroll-icon .circle_box .ani_cir1{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #919191;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    opacity: 0;
+    animation: upDown 2s ease-in-out infinite;    
+}
+.main-scroll-icon .circle_box .ani_cir2{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #919191;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    opacity: 0;
+    animation: upDown 2s ease-in-out infinite;
+    animation-delay:0.2s;
+}
+.main-scroll-icon .circle_box .ani_cir3{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #919191;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0;
+    animation: upDown 2s ease-in-out infinite;
+    animation-delay:0.4s;
+}
+.main-scroll-icon .circle_box .ani_cir4{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #919191;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    opacity: 0;
+    animation: upDown 2s ease-in-out infinite;
+    animation-delay:0.6s;
+}
+
+@keyframes upDown{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#section .cont1{
+    margin-top: 200px;
+    position: relative;
+}
+#section .cont1 > h2{
+    font-size: 80px;
+    font-weight: 900;
+    color: #f1f1f1;
+    letter-spacing: -3px;
+    position: absolute;
+    top: -36px;
+    left: 209px;
+}
+#section .cont1_title{
+    width: 1320px;
+    margin: 0 auto;
+}
+#section .cont1_title h2{
+    font-size: 80px;
+    color: #232021;
+    font-weight: 900;
+    letter-spacing: -3px;
+    position: relative;
+    z-index: 5;
+}
+#section .cont1_title h2 span{
+    color: #faa61a;
+}
+#section .cont1_title .cont1_txt{
+    margin-top: 80px;
+}
+#section .cont1_title .cont1_txt li{
+    float: left;
+}
+#section .cont1_title .cont1_txt h3{
+    font-size: 32px;
+    color: #232021;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+/* 글씨외 옆 공간 호버할때도 효과 나오기 위해 padding-right값 넣음 */
+#section .cont1_title .cont1_txt li span{
+    color: #faa61a;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    top: 23px;
+    left: 506px;
+}
+
+#section .cont1_txt .cont1_scale_cir{
+    position: relative;
+    top: -20px;
+    right: -758px;
+}
+#section .cont1_txt .cont1_scale_cir span{
+    display: inline-block;
+}
+#section .cont1_txt .cont1_scale_cir .cont1_plus{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #faa61a;
+    font-size: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+#section .cont1_txt .cont1_scale_cir .cont1_plus a{
+    position: absolute;
+    top: 31%;
+    left: 40%;
+    z-index: 9;
+    color: #fff;
+    font-size: 26px;
+    display: block;
+}
+#section .cont1_txt .cont1_scale_cir .cont1_plus a:hover{
+    transform: rotate(270deg);
+    transition: all 0.5s;
+}
+#section .cont1_txt .cont1_scale_cir .cont1_circle{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #faa61a;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+    animation: scale 2s infinite 0.5s;
+    opacity: 1;
+}
+#section .cont1_txt .cont1_scale_cir .cont1_ani1{
+    animation: scale 2s infinite 1s;
+}
+#section .cont1_txt .cont1_scale_cir .cont1_ani2{
+    animation: scale 2s infinite 1.5s;
+}
+#section .cont1_txt .cont1_scale_cir .cont1_ani3{
+    animation: scale 2s infinite 2s;
+}
+@keyframes scale{
+    100%{
+        opacity: 0;
+        transform: scale(1.7);
+    }
+}
+
+#section .con1_visual{
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.con1_visual_img{
+    width: 1520px;
+    border-radius: 200px 0 0 0;
+    overflow: hidden;
+    margin-left: 100px;
+}
+.con1_visual_img img{
+    width: 100%;
+    height: 100%;
+}
+.con1_visual_txt{
+    width: 40%;
+    padding: 100px 0 60px 70px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #faa61a,rgba(241,155,57,1),rgba(239,123,38,1));
+    border-radius: 100px 0 100px 0;
+    position: absolute;
+    right: 150px;
+    bottom: -80px;
+}
+.con1_visual_txt h2{
+    font-size: 50px;
+    color: #fff;
+    padding-bottom: 80px;
+}
+.con1_visual_txt p{
+    color: rgba(255, 255, 255, 0.466);
+    line-height: 22pt;
+    font-size: 19px;
+    margin-bottom: 120px;
+    letter-spacing: -1px;
+}
+.con_visual_txt_btn li{
+    float: left;
+    margin-right: 50px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.493);
+    transition: all 0.5s;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+.con_visual_txt_btn li:hover span, .con_visual_txt_btn li.on span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.253);
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+}
+.con_visual_txt_btn li.on{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.493);
+    opacity: 1;
+}
+.con_visual_txt_btn li:hover{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.493);
+    opacity: 1;
+}

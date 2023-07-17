@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>메뉴배경다르게_큐원</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#header .gnb").mouseenter(function(){
+                $("#header").addClass("on");
+            });
+            $("#header .gnb").mouseleave(function(){
+                $("#header").removeClass("on");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="hd_top">
+            <div class="hd_t_m clearFix wrap">
+                <h1 class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></h1>
+                <ul class="hd_m clearFix">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지 </a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <div class="serch">
+                    <div class="serch_img">
+                        <img src="img/btn_comm_srch.gif" alt="serch">
+                    </div>
+                </div>
+            </div>
+            <div class="cart"><a href="#"><img src="img/onlinemall_btn.png" alt="mall"></a></div>
+        </div>
+        <div class="gnb">
+            <div class="gnb_bg"></div>
+                <ul class="gnb_wrap clearFix wrap">
+                    <li>
+                        <a href="#">브랜드</a>
+                        <ul class="depth2 line">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">브랜드 히스토리</a></li>
+                            <li><a href="#">TV CF</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">제품</a>
+                        <ul class="depth2">
+                            <li><a href="#">제품 전체 보기</a></li>
+                            <li class="icon q1"><a href="#">큐원<br>트루스위트</a></li>
+                            <li class="icon q2"><a href="#">큐원<br>홈메이드</a></li>
+                            <li class="icon q3"><a href="#">큐원<br>상쾌환</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">레시피</a>
+                        <ul class="depth2">
+                            <li><a href="#">레시피 소개</a></li>
+                            <li><a href="#">영상 레시피</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">쿠킹클래스</a>
+                        <ul class="depth2">
+                            <li><a href="#">쿠킹클래스 소개</a></li>
+                            <li><a href="#">오프라인 쿠킹클래스</a></li>
+                            <li><a href="#">온라인 쿠킹클래스</a></li>
+                            <li><a href="#">체험 후기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                        <ul class="depth2">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">체험단 이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+        </div>
+    </div>
+    <div id="section">
+        <div class="visual">
+            <ul class="visual_img clearFix">
+                <li><img src="img/TopBanner_2016615172229.jpg" alt="img"></li>
+                <li><img src="img/TopBanner_2016615172229.jpg" alt="img"></li>
+                <li><img src="img/TopBanner_2016615172229.jpg" alt="img"></li>
+            </ul>
+            <ul class="play">
+                <li><a href="#"><img src="img/index_mslider_on.png" alt="btn"></a></li>
+                <li><a href="#"><img src="img/index_mslider_off.png" alt="btn"></a></li>
+                <li><a href="#"><img src="img/btn_pause.png" alt="btn"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

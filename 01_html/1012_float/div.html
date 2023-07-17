@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>블록요소, 인라인요소 구분하기</title>
+    <style type="text/css">
+        .txt01{
+            border: 3px solid blue;
+            width: 600px;
+            height: 150px;
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+        .txt02{
+            border: 3px solid #c70036;
+            width: 600px;
+            height: 150px;
+            margin-bottom: 50px;
+        }
+        .txt02 .red{
+            color: red;
+        }
+        .txt02 .pink{
+            color: pink;
+            border: 2px dashed grey;
+        }        
+        .txt03{
+            border: 3px solid yellow;
+            width: 600px;
+            height: 150px;
+        }
+        .area1{
+            background-color: aqua;
+
+            height: 100px;
+        }
+        .area2{
+            background-color: beige;
+            width: 300px;
+            font-size: 30px;
+            margin-bottom: 40px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="txt01">
+        <div class="area1">경기 북부와 강원 내륙, 충북 북부, 경북 북부·산지 등</div><div class="area2">일부 지역에선</div>  아침 기온이 0도 내외로 낮아져 얼음이 얼고 서리가 내리는 곳이 있겠다.   
+    </div>
+    <div class="txt02">
+        아침 사이 <span class="red">중부 내륙과 전북 내륙,</span><span class="pink"> 경북권 내륙에는</span>  가시거리 200m 미만의 짙은 안개가 끼는 곳도 있겠다.   
+    </div>    
+    <div class="txt03">
+        또 중부 서해안과 전북 서해안, 전남권, 경남 서부 내륙에도 가시거리 1㎞ 미만의 안개가 낄 것으로 예상돼 교통안전에 유의해야 한다.    
+    </div>
+</body>
+</html>

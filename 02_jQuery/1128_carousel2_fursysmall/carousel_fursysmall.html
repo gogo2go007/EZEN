@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐러셀_퍼시스몰</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/6b81ac2067.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // 비주얼영역 오른쪽 버튼 클릭했을 때
+            $(".right").click(function(){
+                // panel은 -200% 지점으로 이동하고 나서
+                $(".panel").stop().animate({"margin-left":"-200%"},function(){
+                    // panel li의 첫번째 li는 panel의 끝에 붙여준다.
+                    $(".panel li").first().appendTo(".panel");
+                    //panel의 css 좌표는 -100%로 바꾼다
+                    $(".panel").css({"margin-left":"-100%"});
+                });
+            });
+
+            $(".left").click(function(){
+                $(".panel").stop().animate({"margin-left":"0%"},function(){
+                    $(".panel li").last().prependTo(".panel");
+                    $(".panel").css({"margin-left":"-100%"});
+                });
+            });
+
+            $(".pro_right").click(function(){
+                $(".pro_list").stop().animate({"margin-left":"-50%"},function(){
+                    $(".pro_list li").first().appendTo(".pro_list");
+                    $(".pro_list").css({"margin-left":"-25%"})
+                });
+            });
+
+            $(".pro_left").click(function(){
+                $(".pro_list").stop().animate({"margin-left":"0%"},function(){
+                    $(".pro_list li").last().prependTo(".pro_list");
+                    $(".pro_list").css({"margin-left":"-25%"});
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="visual">
+            <ul class="panel clearFix">
+                <li><img src="img/2.jpg" alt="img"></li>
+                <li><img src="img/4.jpg" alt="img"></li>
+                <li><img src="img/6.jpg" alt="img"></li>
+                <li><img src="img/9.jpg" alt="img"></li>
+                <li><img src="img/10.jpg" alt="img"></li>
+            </ul>
+            <div class="btn left"><a href="#"><i class="fa-solid fa-chevron-left"></i></a></div>
+            <div class="btn right"><a href="#"><i class="fa-solid fa-chevron-right"></i></a></div>
+        </div>
+        <div class="product">
+            <h2>퍼시스몰 <span>이달의 적립금</span> 두배 추천 상품</h2>
+            <h3>퍼시스몰 이달의 BEST 상품을 구입하시고 적립금 두배의 혜택도 가져가세요!</h3>
+            <div class="wrap">
+                <div class="pro_contents">
+                    <ul class="pro_list clearFix">
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/110.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/120.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/130.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/140.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/150.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/160.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/170.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/180.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/190.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/200.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/210.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pro_img">
+                                <img src="img/220.jpg" alt="img">
+                            </div>
+                            <div class="pro_txt">
+                                <p>퍼시스책상 모션데스크</p>
+                                <span>1,702,900</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+            <div class="btn pro_left"><a href="#"><i class="fa-solid fa-chevron-left"></i></a></div>
+            <div class="btn pro_right"><a href="#"><i class="fa-solid fa-chevron-right"></i></a></div>
+        </div>
+        
+    </section>
+</body>
+</html>
